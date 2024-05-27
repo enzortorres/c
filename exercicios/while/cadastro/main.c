@@ -41,6 +41,6 @@ int main(void) {
     sleep(1);
     printf("1...\n");
     sleep(1);
-    printf("\na) MEDIA DOS SALARIOS: R$%.2f\nb) MENOR E MAIOR IDADE: %d | %d\nc) QUANTIDADE MULHERES: %d\nd) IDADE E SEXO DA PESSOA COM MENOR SALARIO: %d | %c", media, menorIdade, maiorIdade, quantF, idadeMenorSalario, sexoMenorSalario);
+    printf("\na) MEDIA DOS SALARIOS: R$%.2f\nb) MENOR E MAIOR IDADE: %d | %d\nc) QUANTIDADE MULHERES: %d\nd) IDADE E SEXO DA PESSOA COM MENOR SALARIO: %d | %c\n", media, menorIdade, maiorIdade, quantF, idadeMenorSalario, sexoMenorSalario);
     return 0;
 }
