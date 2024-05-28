@@ -29,7 +29,7 @@ int main(void) {
             strcat(paises[i], " PEQUENO");
         }
     }
-    printf("Pais com mais caracteres: %s\nNumero de caracteres: %d", maisLetrasPaises, maiorTam);
+    printf("Pais com mais caracteres: %s\nNumero de caracteres: %d\n", maisLetrasPaises, maiorTam);
     printf("Quantidade de brasileiros: %d\n", qtdBrasil);
 
     for (int i = 0; i < 3; i++) {

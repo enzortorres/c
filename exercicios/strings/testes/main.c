@@ -2,7 +2,7 @@
 #include <string.h>
 // FUNÇõES DA BIBLIOTECA <string.h>
 // strlen | string length = para ver o tamanho da string; Exemplo: strlen(STRING QUE DESEJA CONTAR OS CARACTERES)
-// strcmp | string compare = para comparar strings; Exemplo: strcmp(PRIMEIRA COMPARAÇÃO, SEGUNDA COMPARAÇÃO)
+// strcmp | string compare = para comparar strings; Exemplo: strcmp(PRIMEIRA COMPARAÇÃO, SEGUNDA COMPARAÇÃO) se for igual, retorna o valor 0, caso o contrario 1;
 // strcpy | string copy = para copiar uma string; Exemplo: strcpy(PARA ONDE VAI SER COPIADO, OQUE VAI SER COPIADO)
 // strcat | string concatenate = para contatenar uma string com outra; Exemplo: strcat()
 int main(void) {
