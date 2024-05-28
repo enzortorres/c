@@ -23,8 +23,17 @@ int main(void) {
         if (comp == 0) {
             qtdBrasil++;
         }
+        if (strlen(paises[i]) >= 5) {
+            strcat(paises[i], " GRANDE");
+        } else {
+            strcat(paises[i], " PEQUENO");
+        }
     }
     printf("Pais com mais caracteres: %s\nNumero de caracteres: %d", maisLetrasPaises, maiorTam);
     printf("Quantidade de brasileiros: %d\n", qtdBrasil);
+
+    for (int i = 0; i < 3; i++) {
+        printf("Nome do seu pais: %s\n", paises[i]);
+    }
     return 0;
 }
