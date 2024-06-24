@@ -8,7 +8,7 @@
 int main(void) {
     char nomes[3][20], copia[20];
     int tam = 0, tamMaiorNome = 0;
-    int comp = 0;
+    int teste = 0;
     int njoels = 0;
 
     for (int i = 0; i < 3; i++) {
@@ -20,8 +20,8 @@ int main(void) {
             tamMaiorNome = tam;
             strcpy(copia, nomes[i]); // para copiar a string nomes[i] na variavel copia
         }
-        comp = strcmp(nomes[i], "joel"); // strcasecomp() = para comparar com letras capitalizadas
-        if (comp == 0) {
+        teste = strcmp(nomes[i], "joel"); // strcasecmp() = para comparar com letras capitalizadas
+        if (teste == 0) { 
             njoels++;
         }
         strcat(nomes[i],"br"); // para juntar a string nomes[i] com um "br" no final

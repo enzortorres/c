@@ -2,7 +2,7 @@
 
 int main(void) {
     char resposta, sexo;
-    int quantSim = 0, quantNao = 0, quantSimF = 0, quantNaoM = 0;
+    int quantSim = 0, quantNao = 0, quantSimF = 0, quantNaoM = 0, quantidade = 0;
     float porcFemininoSim = 0, porcMasculinoNao = 0;
     
     for (int i = 0; i < 10;i++) {
@@ -26,4 +26,7 @@ int main(void) {
     porcMasculinoNao = (quantNaoM * 100) / 10;
     printf("Quantidade de pessoas que responderam sim: %d\nQuantidade de pessoas que responderam nao: %d\nPorcentagem de pessoas do sexo feminino que responderam sim: %.2f%%\nPorcentagem de pessoas do sexo masculino que responderam nao: %.2f%%", quantSim, quantNao, porcFemininoSim, porcMasculinoNao);
     return 0;
+}
+for (int i = 0; i < 5; i++) {
+    printf("GHe")
 }
