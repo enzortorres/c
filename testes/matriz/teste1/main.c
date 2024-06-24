@@ -1,22 +1,22 @@
-// // #include <stdio.h> 
+#include <stdio.h> 
 
-// // int main (void) {
-// //   int numbers[3][3];
-// //   for (int i = 3; i > 0; i--) {
-// //     for (int j = 3; j > 0; j--) {
-// //       printf("Digite o valor da %d linha e %d coluna: ", i+1, j+1);
-// //       scanf("%d", &numbers[i][j]);
-// //     }
-// //   }
-// //   printf("\n\n");
-// //   for (int i = 0; i < 3; i++) {
-// //     for (int j = 0; j < 3; j++) {
-// //       printf("[%d]", numbers[i][j]);
-// //     }
-// //     printf("\n");
-// //   }
-// //   return 0;
-// // }
+int main (void) {
+    int numbers[3][4];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("Digite o valor da %d linha e %d coluna: ", i+1, j+1);
+        scanf("%d", &numbers[i][j]);
+        }
+    }
+    printf("\n\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("[%d]", numbers[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
 
 // #include <stdio.h>
 
@@ -91,22 +91,22 @@
 //   }
 //   return 0;
 // }
-#include <stdio.h> 
+// #include <stdio.h> 
 
-int main (void) {
+// int main (void) {
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (i < 2) {
-                printf("_");
-            } else {
-                printf(" ");
-            }
-            if ((j % 2 == 0 || j != 0) && j < 2) {
-                printf("|");
-            }
-        }
-        printf("\n");
-    }
-    return 0;
-}
+//     for (int i = 0; i < 3; i++) {
+//         for (int j = 0; j < 3; j++) {
+//             if (i < 2) {
+//                 printf("_");
+//             } else {
+//                 printf(" ");
+//             }
+//             if ((j % 2 == 0 || j != 0) && j < 2) {
+//                 printf("|");
+//             }
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
