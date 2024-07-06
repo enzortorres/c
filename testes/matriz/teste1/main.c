@@ -5,7 +5,7 @@ int main (void) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
             printf("Digite o valor da %d linha e %d coluna: ", i+1, j+1);
-        scanf("%d", &numbers[i][j]);
+            scanf("%d", &numbers[i][j]);
         }
     }
     printf("\n\n");
