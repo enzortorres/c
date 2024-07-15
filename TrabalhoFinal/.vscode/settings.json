@@ -1,0 +1,58 @@
+{
+    "window.zoomLevel": 0.5,
+    "editor.fontSize": 13,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "redhat.telemetry.enabled": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.8,
+    // "editor.rulers": [80, 120, 160],
+    "workbench.startupEditor": "none",
+    "editor.renderLineHighlight": "gutter",
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "editor.semanticHighlighting.enabled": false,
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset"
+    },
+    "apc.header": {
+        "height": 36
+    },
+    "apc.listRow": {
+        "height": 24
+    },
+    "apc.stylesheet": {
+        ".title-label > h2": "display: none",
+        "editor-actions": "display: none",
+        ".pane-body": "padding: 4px"  ,
+        ".pane-header": "padding: 0 8px"  
+    },
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 14,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.activityBar.location": "top",
+    "editor.minimap.size": "fill",
+    "indentRainbow.colors": [
+        "rgba(3, 4, 94,0.15)",
+        "rgba(2, 62, 138,0.15)",
+        "rgba(0, 119, 182, 0.15)",
+        "rgba(0, 150, 199,0.15)",
+        "rgba(0, 180, 216,0.15)",
+        "rgba(72, 202, 228,0.15)",
+        "rgba(144, 224, 239,0.15)",
+        "rgba(144, 224, 239,0.1)",
+        "rgba(144, 224, 239,0.05)",
+        "rgba(144, 224, 239,0.025)"
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "files.autoSaveDelay": 1000,
+    "editor.stickyScroll.enabled": false,
+    "liveshare.nameTagVisibility": "Never",
+    "liveshare.alwaysFollowHost": true,
+    "git.autofetch": true,
+}
