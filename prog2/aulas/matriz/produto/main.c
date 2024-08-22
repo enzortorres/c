@@ -8,7 +8,7 @@
 //     for(int i = 0; i < 3; i++) { // Pegar os valores da Matriz A
 //         for(int j = 0; j < 2; j++) {
 //             printf("Valor da %d linha e %d coluna da matriz A: ", i+1, j+1);
-//             sc anf("%d", &matrizA[i][j]);
+//             scanf("%d", &matrizA[i][j]);
 //         }
 //         printf("\n");
 //     }
