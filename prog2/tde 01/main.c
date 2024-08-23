@@ -1,4 +1,4 @@
-// #include <stdio.h> // EXERCÍCIO 1
+// #include <stdio.h> // -==X EXERCÍCIO 1 X==-
 
 // int main(void) {
 //     int matrizA[2][4];
@@ -21,7 +21,7 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 2
+// #include <stdio.h> // -==X EXERCÍCIO 2 X==-
 
 // int main(void) {
 //     int matrizA[3][3];
@@ -51,7 +51,7 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 3
+// #include <stdio.h> // -==X EXERCÍCIO 3 X==-
 
 // int main(void) {
 //     int matrizA[2][5];
@@ -79,11 +79,11 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 4
+// #include <stdio.h> // -==X EXERCÍCIO 4 X==-
 
 // int main(void) {
 //     int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
-    
+
 //     for (int i = 0; i < 4; i++) { // Pega os valores da matriz A
 //         for (int j = 0; j < 2; j++)  {
 //             printf("Digite o valor da %d linha e %d coluna da matrizA: ", i+1, j+1);
@@ -135,7 +135,7 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 5
+// #include <stdio.h> // -==X EXERCÍCIO 5 X==-
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2]
@@ -144,7 +144,7 @@
 //     // [*] [0,1] [0,2]
 //     // [*] [*] [1,2]
 //     // [*] [*] [*]
-    
+
 //     int matriz[3][3];
 
 //     for (int i = 0; i < 3; i++) {
@@ -156,9 +156,7 @@
 
 //     for (int i = 0; i < 3; i++) {
 //         for (int j = 0; j < 3; j++) {
-//             if (i == 0 && j > 0) {
-//                 printf("[ %d ]", matriz[i][j]);
-//             } else if (i == 1 && j == 2) {
+//             if (i < j) {
 //                 printf("[ %d ]", matriz[i][j]);
 //             } else {
 //                 printf("[ * ]");
@@ -167,10 +165,10 @@
 //         printf("\n");
 //     }
 
-//     return 0;  
+//     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 6
+// #include <stdio.h> // -==X EXERCÍCIO 6 X==-
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2] [0,3]
@@ -215,7 +213,129 @@
 //     }
 //     printf("\nSoma do triangulo inferior da diagonal principal, incluindo a diagonal principal: %d", soma);
 
-    
+//     return 0;
+// }
+
+// #include <stdio.h> // -==X EXERCÍCIO 7 X==-
+// // [0,0][0,1][0,2]
+// // [1,0][1,1][1,2]
+// // [2,0][2,1][2,2]
+// int main(void) {
+//     int matriz[3][3], maior = 0;
+//     for (int i = 0; i < 3; i++) {
+//         for (int j = 0; j < 3; j++) {
+//             printf("Digite o valor da %d linha e %d coluna:", i+1, j+1);
+//             scanf("%d", &matriz[i][j]);
+//         }
+//     }
+
+//     for (int i = 0; i < 3; i++) {
+//         for (int j = 0; j < 3; j++) {
+//             if ((i == 1 && j == 1) || i + 2 == j || j + 2 == i) {
+//                 if (matriz[i][j] > maior) {
+//                     maior = matriz[i][j];
+//                 }
+//             }   
+//         }
+//     }
+
+//     for (int i = 0; i < 3; i++) {
+//         for (int j = 0; j < 3; j++) {
+//             printf("[ %d ]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("O maior valor da diagonal secundaria foi: %d", maior);
+//     return 0;
+// }
+
+// #include <stdio.h> // EXERCÍCIO 8
+
+// int main(void) {
+//     // [0,0] [0,1] [0,2] [x]
+//     // [1,0] [1,1] [x] [1,3]
+//     // [2,0] [x] [2,2] [2,3]
+//     // [x] [3,1] [3,2] [3,3]
+//     int matriz[4][4], qtd = 0;
+//     float media = 0, soma = 0;
+//     for (int i = 0; i < 4; i++) {
+//         for (int j = 0; j < 4; j++) {
+//             printf("Digite o valor da %d linha e %d coluna:", i+1, j+1);
+//             scanf("%d", &matriz[i][j]);
+//             if (i + j > 3) {
+//                 soma += matriz[i][j];
+//                 qtd++;
+//             }
+//         }
+//         printf("\n");
+//     }
+
+
+//     for (int i = 0; i < 4; i++) {
+//         for (int j = 0; j < 4; j++) {
+//             printf("[ %d ]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     media = soma / qtd;
+//     printf("Media: %.2f", media);
+//     return 0;
+// }
+
+// #include <stdio.h> // EXERCÍCIO 9
+
+// float soma(float n1, float n2) {
+//     return n1 + n2;
+// }
+
+// float subtracao(float n1, float n2) {
+//     return n1 - n2;
+// }
+
+// float multiplicacao(float n1, float n2) {
+//     return n1 * n2;
+// }
+
+// float divisao(float n1, float n2) {
+//     if (n1 == 0 || n2 == 0) {
+//         printf("ERRO! Nao pode realizar divisao por zero!\n");
+//         return 0;
+//     } else {
+//         return n1 / n2;
+//     }
+// }
+
+// int main(void) {
+//     float number1 = 0;
+//     float number2 = 0;
+//     int oper = 0;
+
+//     printf("Digite o primeiro valor: ");
+//     scanf("%f", &number1);
+//     printf("Digite o segundo valor: ");
+//     scanf("%f", &number2);
+//     printf("\nQual operacao deseja realizar?\n1- Soma\n2- Subtracao\n3- Multiplicaco\n4- Divisao\n->");
+//     scanf(" %d", &oper);
+//     printf("\n");
+
+//     switch (oper) {
+//         case 1:
+//             printf("Resultado: %.2f", soma(number1, number2));
+//             break;
+//         case 2:
+//             printf("Resultado: %.2f", subtracao(number1, number2));
+//             break;
+//         case 3:
+//             printf("Resultado: %.2f", multiplicacao(number1, number2));
+//             break;
+//         case 4:
+//             printf("Resultado: %.2f", divisao(number1, number2));
+//             break;
+//         default:
+//             printf("Operador invalido!");
+//     }
+
 //     return 0;
 // }
 
