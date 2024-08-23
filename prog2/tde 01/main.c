@@ -231,7 +231,7 @@
 
 //     for (int i = 0; i < 3; i++) {
 //         for (int j = 0; j < 3; j++) {
-//             if ((i == 1 && j == 1) || i + 2 == j || j + 2 == i) {
+//             if (i + j <= 1) {
 //                 if (matriz[i][j] > maior) {
 //                     maior = matriz[i][j];
 //                 }
@@ -339,4 +339,92 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h> // EXERCÍCIO 10
+
+// int tabuada(int number) {
+//     for (int i = 1; i <= number; i++) {
+//         if (number == 0) {
+//             printf("ERRO! Valor digitado invalido!\n");
+//         } else {
+//             printf("7 x %d = %d\n", i, 7 * i);
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(void) {
+//     int number = 0;
+    
+//     printf("Digite um numero: ");
+//     scanf("%d", &number);
+
+//     printf("\n");
+
+//     tabuada(number);
+//     return 0;
+// }
+
+// #include <stdio.h> // EXERCÍCIO 11
+
+// int maior(int array[3]) {
+//     int maior = 0;
+//     for (int i = 0; i < 3; i++) {
+//         if (array[i] > maior) {
+//             maior = array[i];
+//         }
+//     }
+
+//     printf("\nO maior valor digitado foi: %d\n", maior);
+//     return 0;
+// }
+
+// int main(void) {
+//     int numbers[3];
+
+//     for (int i = 0; i < 3; i++) {
+//         printf("Digite o %d valor: ", i+1);
+//         scanf("%d", &numbers[i]);
+//     }
+//     maior(numbers);
+
+//     return 0;
+// }
+
+// #include <stdio.h> // EXERCÍCIO 12
+
+// float aumento(float salario, char nivelExp) {
+//     float aumento = 0;
+
+//     switch (nivelExp) {
+//         case 's':
+//             aumento = 0.05;
+//             break;
+//         case 'p':
+//             aumento = 0.010;
+//             break;
+//         case 'j':
+//             aumento = 0.15;
+//             break;
+//         default:
+//             printf("ERRO! Nivel de experiencia inválido!");
+//             return salario;
+//     }
+
+//     float valorAumento = salario * aumento;
+//     return salario + valorAumento;
+// }
+
+// int main(void) {
+//     float salario = 0;
+//     char nivelExp;
+
+//     printf("Digite o seu salario: ");
+//     scanf("%f", &salario);
+//     printf("Digite o seu nivel de experiencia: (s- senior, p- pleno, j- junior)\n->");
+//     scanf(" %c", &nivelExp);
+
+//     float novoSalario = aumento(salario, nivelExp);
+//     printf("Novo salario: %.2f\n", novoSalario);
+
+//     return 0;
+// }
