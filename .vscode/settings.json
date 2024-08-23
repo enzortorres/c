@@ -87,7 +87,7 @@
   },
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.fontSize": 14,
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.activityBar.location": "top",

@@ -451,5 +451,29 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h> // EXERCÍCIO 14
 
+// float mediaPontos(float pontos, int qtdJogos) {
+//     return pontos / qtdJogos;
+// }
+
+
+// int main(void) {
+//     int qtdVitorias = 0, qtdEmpates = 0, qtdDerrotas, qtdJogos = 0;
+//     float pontos = 0;
+
+//     printf("Digite a quantidade de vitorias do seu time:");
+//     scanf("%d", &qtdVitorias);
+//     pontos += qtdVitorias * 3;
+
+//     printf("Digite a quantidade de empates do seu time:");
+//     scanf("%d", &qtdEmpates);
+//     pontos += qtdEmpates * 1;
+     
+//     printf("Digite a quantidade de derrotas do seu time:");
+//     scanf("%d", &qtdDerrotas);
+//     qtdJogos = qtdVitorias + qtdEmpates + qtdDerrotas;
+    
+//     printf("Media de pontos por jogos: %.2f\n", mediaPontos(pontos, qtdJogos));
+//     return 0;
+// }
