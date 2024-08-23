@@ -428,3 +428,28 @@
 
 //     return 0;
 // }
+
+// #include <stdio.h> // EXERCÍCIO 13
+
+// float soma(float n1,float n2,float n3) {
+//     float soma = n1 + n2 + n3;
+//     return soma;
+// }
+
+// float media(float n1, float n2, float n3) {
+//     return soma(n1, n2, n3) / 3;
+// }
+
+// int main(void) {
+//     int numbers[3];
+//     for (int i = 0; i < 3; i++) {
+//         printf("Digite o %d valor: ", i+1);
+//         scanf("%d", &numbers[i]);
+//     }
+//     printf("A soma dos valores digitados: %.2f\n", soma(numbers[0], numbers[1], numbers[2]));
+//     printf("Media dos valores digitados: %.2f\n", media(numbers[0], numbers[1], numbers[2]));
+//     return 0;
+// }
+
+#include <stdio.h>
+
