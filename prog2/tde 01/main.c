@@ -469,11 +469,24 @@
 //     printf("Digite a quantidade de empates do seu time:");
 //     scanf("%d", &qtdEmpates);
 //     pontos += qtdEmpates * 1;
-     
+
 //     printf("Digite a quantidade de derrotas do seu time:");
 //     scanf("%d", &qtdDerrotas);
 //     qtdJogos = qtdVitorias + qtdEmpates + qtdDerrotas;
-    
+
 //     printf("Media de pontos por jogos: %.2f\n", mediaPontos(pontos, qtdJogos));
 //     return 0;
 // }
+
+// #include <stdio.h> // EXERCÍCIO 15
+
+// // a) 25 (ENDEREÇO DA VARIÁVEL A) (ENDEREÇO DA VARIÁVEL A) 25 50 (ENDEREÇO DA VARIÁVEL B)
+// // b) "a" = VARIÁVEL DE TIPO INTEIRo, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = VALOR DA VARIÁVEL APONTADA (a), "b" = VARIÁVEL QUE ARMAZENA O VALOR DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
+
+// int main(void) {
+//     int a = 25;
+//     int *pa = &a;
+//     int b = *pa + a;
+//     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
+//     return 0;
+// }   
