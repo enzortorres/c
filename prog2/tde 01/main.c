@@ -253,17 +253,24 @@
 // #include <stdio.h> // EXERCÍCIO 8
 
 // int main(void) {
-//     // [0,0] [0,1] [0,2] [x]
-//     // [1,0] [1,1] [x] [1,3]
-//     // [2,0] [x] [2,2] [2,3]
-//     // [x] [3,1] [3,2] [3,3]
+//     // [0,0] [0,1] [0,2] [0,3]
+//     // [1,0] [1,1] [1,2] [1,3]
+//     // [2,0] [2,1] [2,2] [2,3]
+//     // [3,0] [3,1] [3,2] [3,3]
+
+//     // [0,0] [0,1] [0,2] [0,3] [0,4]
+//     // [1,0] [1,1] [1,2] [1,3] [1,4]
+//     // [2,0] [2,1] [2,2] [2,3] [2,4]
+//     // [3,0] [3,1] [3,2] [3,3] [3,4]
+//     // [4,0] [4,1] [4,2] [4,3] [4,4]
+
 //     int matriz[4][4], qtd = 0;
 //     float media = 0, soma = 0;
 //     for (int i = 0; i < 4; i++) {
 //         for (int j = 0; j < 4; j++) {
 //             printf("Digite o valor da %d linha e %d coluna:", i+1, j+1);
 //             scanf("%d", &matriz[i][j]);
-//             if (i + j > 3) {
+//             if (i + j >= 4) {
 //                 soma += matriz[i][j];
 //                 qtd++;
 //             }
@@ -457,10 +464,9 @@
 //     return pontos / qtdJogos;
 // }
 
-
 // int main(void) {
 //     int qtdVitorias = 0, qtdEmpates = 0, qtdDerrotas, qtdJogos = 0;
-//     float pontos = 0;
+//     int pontos = 0;
 
 //     printf("Digite a quantidade de vitorias do seu time:");
 //     scanf("%d", &qtdVitorias);
@@ -474,7 +480,9 @@
 //     scanf("%d", &qtdDerrotas);
 //     qtdJogos = qtdVitorias + qtdEmpates + qtdDerrotas;
 
+//     printf("Pontos totais: %d\n", pontos);
 //     printf("Media de pontos por jogos: %.2f\n", mediaPontos(pontos, qtdJogos));
+
 //     return 0;
 // }
 

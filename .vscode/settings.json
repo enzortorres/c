@@ -112,5 +112,6 @@
   "code-runner.clearPreviousOutput": true,
   "liveshare.allowGuestDebugControl": true,
   "git.autofetch": true,
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "C_Cpp.errorSquiggles": "enabled"
 }
