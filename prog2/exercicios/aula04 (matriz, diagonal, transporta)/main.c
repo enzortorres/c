@@ -99,6 +99,7 @@ int main(void) {
             scanf("%d", &matriz[i][j]);
             matrizTransposta[j][i] = matriz[i][j];
         }
+        printf("\n");
     }
     printf("Matriz original:\n");
     for(int i = 0; i < 2; i++) {
@@ -107,7 +108,7 @@ int main(void) {
         }
         printf("\n");
     }
-    printf("\nMatriz transposta\n");
+    printf("\n\nMatriz transposta:\n");
     for(int i = 0; i < 4; i++) {
         for (int j = 0; j < 2; j++) {
             printf("[ %d ]", matrizTransposta[i][j]);
