@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-    int NUM = 100;
+    int NUM = 10;
 
     for (int i = 0; i < NUM; i++) {
         for (int j = 0; j < NUM; j++) {
