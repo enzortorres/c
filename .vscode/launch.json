@@ -1,24 +1,55 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/enzor/OneDrive/Documents/Estudos/c/prog2/tde 01",
-      "program": "c:/Users/enzor/OneDrive/Documents/Estudos/c/prog2/tde 01/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    }
-  ]
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "JetBrains Mono",
+  "window.zoomLevel": 0.5,
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "files.autoSaveDelay": 1000,
+  "files.autoSave": "afterDelay",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.8,
+  // "editor.rulers": [80, 120, 160],
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.renderLineHighlight": "gutter",
+  "workbench.editor.labelFormat": "short",
+  "explorer.compactFolders": false,
+  "editor.semanticHighlighting.enabled": false,
+  "apc.electron": {
+      "titleBarStyle": "hiddenInset"
+  },
+  "apc.header": {
+      "height": 36
+  },
+  "apc.listRow": {
+      "height": 24
+  },
+  "apc.stylesheet": {
+      ".title-label > h2": "display: none",
+      "editor-actions": "display: none",
+      ".pane-body": "padding: 4px"  ,
+      ".pane-header": "padding: 0 8px"  
+  },
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 14,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.activityBar.location": "top",
+  "editor.minimap.size": "fill",
+  "indentRainbow.colors": [
+      "rgba(3, 4, 94,0.15)",
+      "rgba(2, 62, 138,0.15)",
+      "rgba(0, 119, 182, 0.15)",
+      "rgba(0, 150, 199,0.15)",
+      "rgba(0, 180, 216,0.15)",
+      "rgba(72, 202, 228,0.15)",
+      "rgba(144, 224, 239,0.15)",
+      "rgba(144, 224, 239,0.1)",
+      "rgba(144, 224, 239,0.05)",
+      "rgba(144, 224, 239,0.025)"
+  ],
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "git.enableSmartCommit": true,
 }
