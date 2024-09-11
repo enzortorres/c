@@ -60,7 +60,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "window.zoomLevel": 0.5,
-  "editor.fontSize": 13,
+  "editor.fontSize": 15,
   "workbench.iconTheme": "material-icon-theme",
   "editor.wordWrap": "on",
   "editor.fontFamily": "JetBrains Mono",
