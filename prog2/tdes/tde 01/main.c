@@ -1,4 +1,7 @@
-// #include <stdio.h> // -==X EXERCÍCIO 1 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 1 X==-
 
 // int main(void) {
 //     int matrizA[2][4];
@@ -21,7 +24,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 2 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 2 X==-
 
 // int main(void) {
 //     int matrizA[3][3];
@@ -51,7 +57,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 3 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 3 X==-
 
 // int main(void) {
 //     int matrizA[2][5];
@@ -79,7 +88,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 4 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 4 X==-
 
 // int main(void) {
 //     int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
@@ -135,7 +147,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 5 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 5 X==-
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2]
@@ -168,7 +183,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 6 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 6 X==-
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2] [0,3]
@@ -216,7 +234,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // -==X EXERCÍCIO 7 X==-
+
+
+
+// #include <stdio.h> //! -==X EXERCÍCIO 7 X==-
 // // [0,0][0,1][0,2]
 // // [1,0][1,1][1,2]
 // // [2,0][2,1][2,2]
@@ -250,7 +271,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 8
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 8
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2] [0,3]
@@ -290,7 +314,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 9
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 9
 
 // float soma(float n1, float n2) {
 //     return n1 + n2;
@@ -346,7 +373,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 10
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 10
 
 // int tabuada(int number) {
 //     for (int i = 1; i <= number; i++) {
@@ -371,7 +401,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 11
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 11
 
 // int maior(int array[3]) {
 //     int maior = 0;
@@ -397,7 +430,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 12
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 12
 
 // float aumento(float salario, char nivelExp) {
 //     float aumento = 0;
@@ -436,7 +472,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 13
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 13
 
 // float soma(float n1,float n2,float n3) {
 //     float soma = n1 + n2 + n3;
@@ -458,7 +497,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 14
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 14
 
 // float mediaPontos(float pontos, int qtdJogos) {
 //     return pontos / qtdJogos;
@@ -486,7 +528,10 @@
 //     return 0;
 // }
 
-// #include <stdio.h> // EXERCÍCIO 15
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 15
 
 // // a) 25 (ENDEREÇO DA VARIÁVEL A) (ENDEREÇO DA VARIÁVEL A) 25 50 (ENDEREÇO DA VARIÁVEL B)
 // // b) "a" = VARIÁVEL DE TIPO INTEIRO, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = VALOR DA VARIÁVEL APONTADA (a), "b" = VARIÁVEL QUE ARMAZENA O VALOR DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
@@ -497,4 +542,5 @@
 //     INT B = *PA + A;
 //     PRINTF("%D %D %D %D %D %D\N", A, PA, &A, *PA, B, &B);
 //     RETURN 0;
-// }   
+// }
+
