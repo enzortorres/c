@@ -1,32 +1,24 @@
 {
-    "MIDebuggerPath": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "name": "Debug Single File",
-                "type": "cppdbg",
-                "request": "launch",
-                "program": "${fileDirname}/${fileBasenameNoExtension}", 
-                "args": [],
-                "stopAtEntry": false,
-                "cwd": "${workspaceFolder}",
-                "environment": [],
-                "externalConsole": false,
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ],
-                "preLaunchTask": "build",
-                "miDebuggerPath": "/usr/bin/gdb",  // Atualize o caminho para o GDB, se necessário
-                "internalConsoleOptions": "openOnSessionStart",
-                "logging": { "engineLogging": false }
-            }
-        ],
-    },
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "main.c", // Substitua pelo seu arquivo C
+                "-o",
+                "main.exe"   // Nome do executável
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiling C file"
+        }
+    ],
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "JetBrains Mono",
