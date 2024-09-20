@@ -47,19 +47,19 @@
 
 
 
-#include <stdio.h> //! EXERCÍCIO 4
+// #include <stdio.h> //! EXERCÍCIO 4
 
-int main(void) {
-    int menor = 0;
-    int number = 1;
+// int main(void) {
+//     int menor = 0;
+//     int number = 1;
 
-    while (number != 0) {
-        printf("Digite um valor: ");
-        scanf("%d", &number);
-        if (number < menor || number == 0) {
-            menor = number;
-        }
-    }
-    printf("O menor numero digitado foi: %d", menor);
-    return 0;
-}
+//     while (number != 0) {
+//         printf("Digite um valor: ");
+//         scanf("%d", &number);
+//         if (number < menor || number == 0) {
+//             menor = number;
+//         }
+//     }
+//     printf("O menor numero digitado foi: %d", menor);
+//     return 0;
+// }
