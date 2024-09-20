@@ -91,61 +91,61 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 4 X==-
+#include <stdio.h> //! -==X EXERCÍCIO 4 X==-
 
-// int main(void) {
-//     int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
+int main(void) {
+    int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
 
-//     for (int i = 0; i < 4; i++) { // Pega os valores da matriz A
-//         for (int j = 0; j < 2; j++)  {
-//             printf("Digite o valor da %d linha e %d coluna da matrizA: ", i+1, j+1);
-//             scanf("%d", &matrizA[i][j]);
-//         }
-//         printf("\n");
-//     }
+    for (int i = 0; i < 4; i++) { // Pega os valores da matriz A
+        for (int j = 0; j < 2; j++)  {
+            printf("Digite o valor da %d linha e %d coluna da matrizA: ", i+1, j+1);
+            scanf("%d", &matrizA[i][j]);
+        }
+        printf("\n");
+    }
 
-//     for (int i = 0; i < 2; i++) { // Pega os valores da matriz B
-//         for (int j = 0; j < 4; j++)  {
-//             printf("Digite o valor da %d linha e %d coluna da matrizB: ", i+1, j+1);
-//             scanf("%d", &matrizB[i][j]);
-//         }
-//         printf("\n");
-//     }
+    for (int i = 0; i < 2; i++) { // Pega os valores da matriz B
+        for (int j = 0; j < 4; j++)  {
+            printf("Digite o valor da %d linha e %d coluna da matrizB: ", i+1, j+1);
+            scanf("%d", &matrizB[i][j]);
+        }
+        printf("\n");
+    }
 
-//     for (int i = 0; i < 4; i++) { // Faz o produto da matriz A com a matriz B
-//         for (int j = 0; j < 4; j++) {
-//             for (int k = 0; k < 2; k++) {
-//                 matrizResultante[i][j] += matrizA[i][k] * matrizB[k][j];
-//             }
-//         }
-//     }
+    for (int i = 0; i < 4; i++) { // Faz o produto da matriz A com a matriz B
+        for (int j = 0; j < 4; j++) {
+            for (int k = 0; k < 2; k++) {
+                matrizResultante[i][j] += matrizA[i][k] * matrizB[k][j];
+            }
+        }
+    }
 
-//     printf("Matriz A:\n");
-//     for (int i = 0; i < 2; i++) { // Exibe a matriz A
-//         for (int j = 0; j < 4; j++)  {
-//             printf("[ %d ]", matrizA[i][j]);
-//         }
-//         printf("\n");
-//     }
+    printf("Matriz A:\n");
+    for (int i = 0; i < 2; i++) { // Exibe a matriz A
+        for (int j = 0; j < 4; j++)  {
+            printf("[ %d ]", matrizA[i][j]);
+        }
+        printf("\n");
+    }
 
-//     printf("Matriz B:\n");
-//     for (int i = 0; i < 2; i++) { // Exibe a matriz B
-//         for (int j = 0; j < 4; j++)  {
-//             printf("[ %d ]", matrizB[i][j]);
-//         }
-//         printf("\n");
-//     }
+    printf("Matriz B:\n");
+    for (int i = 0; i < 2; i++) { // Exibe a matriz B
+        for (int j = 0; j < 4; j++)  {
+            printf("[ %d ]", matrizB[i][j]);
+        }
+        printf("\n");
+    }
 
-//     printf("Matriz Resultante:\n");
-//     for (int i = 0; i < 2; i++) { // Exibe a matriz resultante
-//         for (int j = 0; j < 4; j++)  {
-//             printf("[ %d ]", matrizResultante[i][j]);
-//         }
-//         printf("\n");
-//     }
+    printf("Matriz Resultante:\n");
+    for (int i = 0; i < 2; i++) { // Exibe a matriz resultante
+        for (int j = 0; j < 4; j++)  {
+            printf("[ %d ]", matrizResultante[i][j]);
+        }
+        printf("\n");
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
