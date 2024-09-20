@@ -87,5 +87,5 @@ int main(void) {
 }
 
 void contarCaracteres(char *str, int *numCaracteres) {
-
+    
 }

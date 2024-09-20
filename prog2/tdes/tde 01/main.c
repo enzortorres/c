@@ -534,13 +534,63 @@
 // #include <stdio.h> //! EXERCÍCIO 15
 
 // // a) 25 (ENDEREÇO DA VARIÁVEL A) (ENDEREÇO DA VARIÁVEL A) 25 50 (ENDEREÇO DA VARIÁVEL B)
-// // b) "a" = VARIÁVEL DE TIPO INTEIRO, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = VALOR DA VARIÁVEL APONTADA (a), "b" = VARIÁVEL QUE ARMAZENA O VALOR DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
+// // b) "a" = VARIÁVEL DE TIPO INTEIRO, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = CONTEÚDO QUE O PONTEIRO APONTA (a), "b" = VARIÁVEL QUE ARMAZENA O CONTEÚDO DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
 
-// INT MAIN(VOID) {
-//     INT A = 25;
-//     INT *PA = &A;
-//     INT B = *PA + A;
-//     PRINTF("%D %D %D %D %D %D\N", A, PA, &A, *PA, B, &B);
-//     RETURN 0;
+// int main(void) {
+//     int a = 25;
+//     int *pa = &a;
+//     int b = *pa + a;
+//     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
+//     return 0;
 // }
 
+
+
+// #include <stdio.h> //! EXERCÍCIO 16
+
+// void contar_vogais(char *str, int *numCaracteres);
+
+// int main(void) {
+//     char frase[100];
+//     int qtdCaracter = 0;
+
+//     printf("Digite uma frase aleatoria: ");
+//     fgets(frase, sizeof(frase), stdin);
+
+//     contar_vogais(frase, &qtdCaracter);
+//     printf("Quantidade de vogais minusculas digitadas: %d", qtdCaracter);
+
+//     return 0;
+// }
+
+// void contar_vogais(char *str, int *numCaracteres) {
+//     for (int i = 0; str[i] != '\0'; i++) {
+//         if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+//             (*numCaracteres)++;
+//         }
+//     }
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 17
+// #include <math.h>
+
+// //? Cálculo da área de um hexágono: A = 3 * lado² * raiz(3)
+// //? Cálculo do perímetro de um hexágono: P = 6 * lado
+
+// void calcular_hexagono(float lado, float *area, float *perimetro);
+// int main(void) {
+//     float lado = 0, area = 0, perimetro = 0;
+
+//     printf("Digite o lado do hexagono: ");
+//     scanf("%f", &lado);
+//     calcular_hexagono(lado, &area, &perimetro);
+//     printf("Lado do hexagono: %.2f\nArea do hexagono: %.2f\nPerimetro do hexagono: %.2f", lado, area, perimetro);
+//     return 0;
+// }
+
+// void calcular_hexagono(float lado, float *area, float *perimetro) {
+//     *area = 3 * pow(lado, 2) * sqrt(3) / 2;
+//     *perimetro = 6 * lado;
+// }

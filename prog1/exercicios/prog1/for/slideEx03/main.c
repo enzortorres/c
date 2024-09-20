@@ -27,6 +27,3 @@ int main(void) {
     printf("Quantidade de pessoas que responderam sim: %d\nQuantidade de pessoas que responderam nao: %d\nPorcentagem de pessoas do sexo feminino que responderam sim: %.2f%%\nPorcentagem de pessoas do sexo masculino que responderam nao: %.2f%%", quantSim, quantNao, porcFemininoSim, porcMasculinoNao);
     return 0;
 }
-for (int i = 0; i < 5; i++) {
-    printf("GHe")
-}
