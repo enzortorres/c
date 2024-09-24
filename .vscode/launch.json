@@ -1,24 +1,5 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-g",
-                "main.c", // Substitua pelo seu arquivo C
-                "-o",
-                "main.exe"   // Nome do executável
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": ["$gcc"],
-            "detail": "Compiling C file"
-        }
-    ],
+    "externalConsole": false,
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "JetBrains Mono",

@@ -91,61 +91,61 @@
 
 
 
-#include <stdio.h> //! -==X EXERCÍCIO 4 X==-
+// #include <stdio.h> //! -==X EXERCÍCIO 4 X==-
 
-int main(void) {
-    int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
+// int main(void) {
+//     int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
 
-    for (int i = 0; i < 4; i++) { // Pega os valores da matriz A
-        for (int j = 0; j < 2; j++)  {
-            printf("Digite o valor da %d linha e %d coluna da matrizA: ", i+1, j+1);
-            scanf("%d", &matrizA[i][j]);
-        }
-        printf("\n");
-    }
+//     for (int i = 0; i < 4; i++) { // Pega os valores da matriz A
+//         for (int j = 0; j < 2; j++)  {
+//             printf("Digite o valor da %d linha e %d coluna da matrizA: ", i+1, j+1);
+//             scanf("%d", &matrizA[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    for (int i = 0; i < 2; i++) { // Pega os valores da matriz B
-        for (int j = 0; j < 4; j++)  {
-            printf("Digite o valor da %d linha e %d coluna da matrizB: ", i+1, j+1);
-            scanf("%d", &matrizB[i][j]);
-        }
-        printf("\n");
-    }
+//     for (int i = 0; i < 2; i++) { // Pega os valores da matriz B
+//         for (int j = 0; j < 4; j++)  {
+//             printf("Digite o valor da %d linha e %d coluna da matrizB: ", i+1, j+1);
+//             scanf("%d", &matrizB[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    for (int i = 0; i < 4; i++) { // Faz o produto da matriz A com a matriz B
-        for (int j = 0; j < 4; j++) {
-            for (int k = 0; k < 2; k++) {
-                matrizResultante[i][j] += matrizA[i][k] * matrizB[k][j];
-            }
-        }
-    }
+//     for (int i = 0; i < 4; i++) { // Faz o produto da matriz A com a matriz B
+//         for (int j = 0; j < 4; j++) {
+//             for (int k = 0; k < 2; k++) {
+//                 matrizResultante[i][j] += matrizA[i][k] * matrizB[k][j];
+//             }
+//         }
+//     }
 
-    printf("Matriz A:\n");
-    for (int i = 0; i < 2; i++) { // Exibe a matriz A
-        for (int j = 0; j < 4; j++)  {
-            printf("[ %d ]", matrizA[i][j]);
-        }
-        printf("\n");
-    }
+//     printf("Matriz A:\n");
+//     for (int i = 0; i < 2; i++) { // Exibe a matriz A
+//         for (int j = 0; j < 4; j++)  {
+//             printf("[ %d ]", matrizA[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    printf("Matriz B:\n");
-    for (int i = 0; i < 2; i++) { // Exibe a matriz B
-        for (int j = 0; j < 4; j++)  {
-            printf("[ %d ]", matrizB[i][j]);
-        }
-        printf("\n");
-    }
+//     printf("Matriz B:\n");
+//     for (int i = 0; i < 2; i++) { // Exibe a matriz B
+//         for (int j = 0; j < 4; j++)  {
+//             printf("[ %d ]", matrizB[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    printf("Matriz Resultante:\n");
-    for (int i = 0; i < 2; i++) { // Exibe a matriz resultante
-        for (int j = 0; j < 4; j++)  {
-            printf("[ %d ]", matrizResultante[i][j]);
-        }
-        printf("\n");
-    }
+//     printf("Matriz Resultante:\n");
+//     for (int i = 0; i < 2; i++) { // Exibe a matriz resultante
+//         for (int j = 0; j < 4; j++)  {
+//             printf("[ %d ]", matrizResultante[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 
@@ -594,3 +594,92 @@ int main(void) {
 //     *area = 3 * pow(lado, 2) * sqrt(3) / 2;
 //     *perimetro = 6 * lado;
 // }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 18
+
+// char validarSituacao(float nota1, float nota2, float nota3, int faltas, int aulas, float *media);
+
+// int main(void) {
+//     float nota1 = 0, nota2 = 0, nota3 = 0, media = 0;
+//     int faltas = 0, aulas = 0;
+//     char situacao;
+
+//     printf("Digite a primeira nota:");
+//     scanf("%f", &nota1);
+//     printf("Digite a segunda nota:");
+//     scanf("%f", &nota2);
+//     printf("Digite a terceira nota:");
+//     scanf("%f", &nota3);
+//     printf("Digite a quantidade de aulas: ");
+//     scanf("%d", &aulas);
+//     printf("Digite a quantidade de faltas: ");
+//     scanf("%d", &faltas);
+
+//     situacao = validarSituacao(nota1, nota2, nota3, faltas, aulas, &media);
+
+//     switch(situacao) {
+//         case 'A':
+//             printf("Aprovado\n!");
+//             break;
+//         case 'R':
+//             printf("Reprovado\n!");
+//             break;
+//         case 'F':
+//             printf("Reprovado por falta!\n");
+//             break;
+//         default:
+//             printf("Erro!\n");
+//     }
+
+//     return 0;
+// }
+
+// char validarSituacao(float nota1, float nota2, float nota3, int faltas, int aulas, float *media) {
+//     float soma = nota1 + nota2 + nota3;
+//     *media = soma / 3;
+//     if (faltas <= (aulas * 0.25)) {
+//         if (*media >= 6) {
+//             return 'A';
+//         } else {
+//             return 'R';
+//         }
+//     } else {
+//         return 'F';
+//     }
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 19
+
+// int verificar_pares(int *array, int num_elementos);
+
+// int main(void) {
+//     int numbers[6], pares = 0;
+//     int tamanho = sizeof(numbers) / sizeof(numbers[0]);
+
+//     for(int i = 0; i < 6; i++) {
+//         printf("Digite o %döííóó önumero: ", i+1);
+//         scanf("%d", &numbers[i]);
+//     }
+
+//     pares = verificar_pares(numbers, tamanho);
+//     printf("Quantidade de numeros pares na array: %d", pares);
+
+//     return 0;
+// }
+
+// int verificar_pares(int *array, int num_elementos) {
+//     int qtdPares = 0;
+//     for (int i = 0; i < num_elementos; i++) {
+//         if (*(array + i) % 2 == 0) {
+//             qtdPares++;
+//         }
+//     }
+//     return qtdPares;
+// }
+
+
+

@@ -64,5 +64,9 @@
   "liveshare.allowGuestDebugControl": true,
   "git.autofetch": true,
   "files.autoSave": "afterDelay",
-  "C_Cpp.errorSquiggles": "enabled"
+  "C_Cpp.errorSquiggles": "enabled",
+  "c-cpp-compile-run.output-location": "./",
+  "code-runner.executorMap": {
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $fileNameWithoutExt.exe"
+  }
 }
