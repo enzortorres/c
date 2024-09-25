@@ -1,6 +1,3 @@
-
-
-
 // #include <stdio.h> //! -==X EXERCÍCIO 1 X==-
 
 // int main(void) {
@@ -661,7 +658,7 @@
 //     int tamanho = sizeof(numbers) / sizeof(numbers[0]);
 
 //     for(int i = 0; i < 6; i++) {
-//         printf("Digite o %döííóó önumero: ", i+1);
+//         printf("Digite o %do numero: ", i+1);
 //         scanf("%d", &numbers[i]);
 //     }
 
@@ -683,3 +680,88 @@
 
 
 
+// #include <stdio.h> //! EXERCÍCIO 20
+
+// int inverter_vetor(int *array1, int *array2, int tamanho);
+
+// int main(void) {
+//     int tamanho = 0;
+
+//     printf("Digite o tamanho dos arrays: ");
+//     scanf("%d", &tamanho);
+
+//     int numbers1[tamanho], numbers2[tamanho];
+
+//     for (int i = 0; i < tamanho; i++) {
+//         printf("Digite o %do numero: ", i+1);
+//         scanf("%d", &numbers1[i]);
+//     }
+
+//     inverter_vetor(numbers1, numbers2, tamanho);
+
+//     printf("Vetor 1:\n");
+//     for (int i = 0; i < tamanho; i++) {
+//         printf("[%d]", numbers1[i]);
+//     }
+
+//     printf("\n\nVetor 2:\n");
+//     for (int i = 0; i < tamanho; i++) {
+//         printf("[%d]", numbers2[i]);
+//     }
+
+//     printf("\nMaior valor encontrado: %d\n", inverter_vetor(numbers1, numbers2, tamanho));
+
+//     return 0;
+// }
+
+// int inverter_vetor(int *array1, int *array2, int tamanho) {
+//     int maior = 0;
+
+//     for (int i = 0; i < tamanho; i++) {
+//         *(array2 + i) = *(array1 + (tamanho - 1 - i));
+
+//         if (*(array1 + i) > maior) {
+//             maior = *(array1 + i);
+//         }
+//     }
+
+//     return maior;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 21
+
+// void multiplicar_escalar(int *array1, int *array2, int escalar, int tamanho);
+
+// int main(void) {
+//     int tamanho = 0, escalar = 0;
+
+//     printf("Digite o tamanho das arrays: ");
+//     scanf("%d", &tamanho);
+
+//     int numbers1[tamanho], numbers2[tamanho];
+
+//     for (int i = 0; i < tamanho; i++) {
+//         printf("Digite o %do numero: ", i+1);
+//         scanf("%d", &numbers1[i]);
+//     }
+
+//     printf("Digite o valor do escalar: ");
+//     scanf("%d", &escalar);
+
+//     multiplicar_escalar(numbers1, numbers2, escalar, tamanho);
+
+//     printf("Array resultante:\n");
+//     for (int i = 0; i < tamanho; i++) {
+//         printf("[%d]", numbers2[i]);
+//     }
+
+//     return 0;
+// }
+
+// void multiplicar_escalar(int *array1, int *array2, int escalar, int tamanho) {
+//     for (int i = 0; i < tamanho; i++) {
+//         *(array2 + i) = *(array1 + i) * escalar;
+//     }
+// }
