@@ -765,3 +765,190 @@
 //         *(array2 + i) = *(array1 + i) * escalar;
 //     }
 // }
+
+// #include <stdio.h> //! EXERCÍCIO 22
+// #include <stdlib.h> 
+
+// int main(void) {
+//     int qtd = 0, soma = 0;
+//     printf("Digite a quantidade de elementos do array: ");
+//     scanf("%d", &qtd);
+
+//     int *array = (int *) malloc(qtd * sizeof(int));
+//     if (array == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for (int i = 0; i < qtd; i++) {
+//         printf("Digite o %do numero: ", i+1);
+//         scanf("%d", &array[i]);
+//         soma += array[i];
+//     }
+
+//     printf("Array formado:\n");
+//     for (int i = 0; i < qtd; i++) {
+//         printf("[%d]", array[i]);
+//     }
+//     printf("\nSoma de todos os valores: %d\n", soma);
+
+//     free(array);
+
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 23
+// #include <stdlib.h>
+
+// int main(void) {
+//     int qtdElementos = 0;
+//     printf("Digite a quantidade de elementos do array: ");
+//     scanf("%d", &qtdElementos);
+
+//     int *array = (int *) malloc(qtdElementos * sizeof(int));
+//     int *arrayCopia = (int *) malloc(qtdElementos * sizeof(int));
+
+//     if (array == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for (int i = 0; i < qtdElementos; i++) {
+//         printf("Digite o %do numero: ", i+1);
+//         scanf("%d", &array[i]);
+//     }
+
+//     for (int i = 0; i < qtdElementos; i++) {
+//         *(arrayCopia + i) = *(array + i);
+//     }
+//     printf("Array formada:\n");
+//     for (int i = 0; i < qtdElementos; i++) {
+//         printf("[%d]", *(array + i));
+//     }
+
+//     printf("\nArray copiada:\n");
+//     for (int i = 0; i < qtdElementos; i++) {
+//         printf("[%d]", *(arrayCopia + i));
+//     }
+//     free(array);
+//     free(arrayCopia);
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 24
+// #include <stdlib.h>
+
+// int main(void) {
+//     int tamanho = 0, removedor = 0;
+//     printf("Digite o tamanho do array: ");
+//     scanf("%d", &tamanho);
+
+//     int *array = (int*) malloc(5 * sizeof(int));
+//     if (array == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for (int i = 0; i < 5; i++) {
+//         printf("Digite o %do numero: ", i+1);
+//         scanf("%d", &array[i]);
+//     }
+
+//     printf("Digite o elemento que deseja remover do array de (1 a %d):", tamanho);
+//     scanf("%d", &removedor);
+//     removedor--;
+//     tamanho--;
+
+//     for (int i = removedor; i < tamanho; i++) {
+//         *(array + i) = *(array + i + 1);
+//     }
+
+
+//     array = (int*) realloc(array, tamanho * sizeof(int));
+//     if (array == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for(int  i= 0; i < tamanho; i++) {
+//         printf("[%d]", *(array + i));
+//     }
+
+//     free(array);
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 25
+// #include <stdlib.h>
+
+// int main(void) {
+//     int linha = 3, coluna = 3, escalar = 0;
+
+//     int **matriz = (int**) malloc(linha * sizeof(int*));
+//     if (matriz == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for(int i = 0; i < linha; i++) {
+//         matriz[i] = (int *) malloc(coluna * sizeof(int));
+//         if (matriz[i] == NULL) {
+//             printf("ERRO! Memoria insuficiente!\n");
+//             return 1;
+//         }
+//     }
+
+//     int **matrizResultante = (int**) malloc(linha * sizeof(int*));
+//     if (matrizResultante == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
+
+//     for(int i = 0; i < linha; i++) {
+//         matrizResultante[i] = (int *) malloc(coluna * sizeof(int));
+//         if (matrizResultante[i] == NULL) {
+//             printf("ERRO! Memoria insuficiente!\n");
+//             return 1;
+//         }
+//     }
+
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             printf("Digite o valor da %d coluna da %d linha: ", j+1, i+1);
+//             scanf("%d", &matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Digite um valor para o escalar: ");
+//     scanf("%d", &escalar);
+
+//     printf("Matriz antiga:\n");
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             printf("[%d]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("\nMatriz resultante:\n");
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             matrizResultante[i][j] = matriz[i][j] * escalar;
+//         }
+//     }
+
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             printf("[%d]", matrizResultante[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
