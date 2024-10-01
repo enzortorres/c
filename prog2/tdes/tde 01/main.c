@@ -858,20 +858,28 @@
 //         scanf("%d", &array[i]);
 //     }
 
-//     printf("Digite o elemento que deseja remover do array de (1 a %d):", tamanho);
+//     printf("Digite o elemento que deseja remover do array:");
 //     scanf("%d", &removedor);
-//     removedor--;
-//     tamanho--;
 
-//     for (int i = removedor; i < tamanho; i++) {
-//         *(array + i) = *(array + i + 1);
+//     int pos;
+
+//     for(pos = 0; pos < tamanho; pos++) {
+//         if (array[pos] == removedor) {
+//             break;
+//         }
 //     }
-
-
-//     array = (int*) realloc(array, tamanho * sizeof(int));
-//     if (array == NULL) {
-//         printf("ERRO! Memoria insuficiente!\n");
-//         return 1;
+//     if (pos == tamanho) {
+//         printf("Numero nao encontrado!\n");
+//     } else {
+//         tamanho--;
+//         for (int i = pos; i < tamanho; i++) {
+//             *(array + i) = *(array + i + 1);
+//         }
+//         array = (int*) realloc(array, tamanho * sizeof(int));
+//         if (array == NULL) {
+//             printf("ERRO! Memoria insuficiente!\n");
+//             return 1;
+//         }
 //     }
 
 //     for(int  i= 0; i < tamanho; i++) {
@@ -949,6 +957,13 @@
 //         }
 //         printf("\n");
 //     }
+
+//     for (int i = 0; i < linha; i++) {
+//         free(matriz[i]);
+//         free(matrizResultante[i]);
+//     }
+//     free(matriz);
+//     free(matrizResultante);
 
 //     return 0;
 // }
