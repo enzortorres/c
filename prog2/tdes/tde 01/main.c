@@ -1,4 +1,4 @@
-// #include <stdio.h> //! -==X EXERCÍCIO 1 X==-
+// #include <stdio.h> //! EXERCÍCIO 1 
 
 // int main(void) {
 //     int matrizA[2][4];
@@ -24,7 +24,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 2 X==-
+// #include <stdio.h> //! EXERCÍCIO 2 
 
 // int main(void) {
 //     int matrizA[3][3];
@@ -57,7 +57,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 3 X==-
+// #include <stdio.h> //! EXERCÍCIO 3 
 
 // int main(void) {
 //     int matrizA[2][5];
@@ -88,7 +88,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 4 X==-
+// #include <stdio.h> //! EXERCÍCIO 4 
 
 // int main(void) {
 //     int matrizA[4][2], matrizB[2][4], matrizResultante[4][4] = {0};
@@ -147,7 +147,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 5 X==-
+// #include <stdio.h> //! EXERCÍCIO 5 
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2]
@@ -183,7 +183,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 6 X==-
+// #include <stdio.h> //! EXERCÍCIO 6 
 
 // int main(void) {
 //     // [0,0] [0,1] [0,2] [0,3]
@@ -234,7 +234,7 @@
 
 
 
-// #include <stdio.h> //! -==X EXERCÍCIO 7 X==-
+// #include <stdio.h> //! EXERCÍCIO 7 
 // // [0,0][0,1][0,2]
 // // [1,0][1,1][1,2]
 // // [2,0][2,1][2,2]
