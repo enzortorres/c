@@ -18,3 +18,11 @@ Funcoes
     Organizacao
 
 Ponteiro
+    Na função tem q escrever no modelo *(vetor + i) (mesma coisa que vetor[i])
+
+Alocação dinâmica
+    Malloc - sizeof / typecast
+    Realloc
+    Free
+    Matriz
+    Teste de memória (return 1 na main)
