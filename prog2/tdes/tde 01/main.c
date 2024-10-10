@@ -373,31 +373,33 @@
 
 
 
-// #include <stdio.h> //! EXERCÍCIO 10
+#include <stdio.h> //! EXERCÍCIO 10
 
-// int tabuada(int number) {
-//     for (int i = 1; i <= number; i++) {
-//         if (number == 0) {
-//             printf("ERRO! Valor digitado invalido!\n");
-//         } else {
-//             printf("7 x %d = %d\n", i, 7 * i);
-//         }
-//     }
-//     return 0;
-// }
+int tabuada(int number);
 
-// int main(void) {
-//     int number = 0;
+int main(void) {
+    int number = 0;
     
-//     printf("Digite um numero: ");
-//     scanf("%d", &number);
+    printf("Digite um numero: ");
+    scanf("%d", &number);
 
-//     printf("\n");
+    printf("\n");
 
-//     tabuada(number);
-//     return 0;
-// }
+    tabuada(number);
+    return 0;
+}
 
+int tabuada(int number) {
+    for (int i = 1; i <= number; i++) {
+        int result = 7 * i;
+        if (number == 0) {
+            printf("ERRO! Valor digitado invalido!\n");
+        } else if (result < number) {
+            printf("7 x %d = %d\n", i, 7 * i);
+        }
+    }
+    return 0;
+}
 
 
 
