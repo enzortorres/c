@@ -323,64 +323,233 @@
 // }
 
 
-#include <stdio.h> //? MÉTODO 2 ( NÃO UTILIZANDO FUNCTION )
-#include <stdlib.h> 
+// #include <stdio.h> //? MÉTODO 2 ( NÃO UTILIZANDO FUNCTION )
+// #include <stdlib.h> 
 
-int main(void) {
-    int tamanho = 0, escalar = 0;
-    printf("Digite o tamanho da matriz (linha e coluna): ");
-    scanf("%d", &tamanho);
+// int main(void) {
+//     int tamanho = 0, escalar = 0;
+//     printf("Digite o tamanho da matriz (linha e coluna): ");
+//     scanf("%d", &tamanho);
 
-    int **matriz = (int **) malloc (tamanho * sizeof(int *));
-    if (matriz == NULL) {
-        printf("ERRO! Memoria insuficiente!\n");
-        return 1;
-    }
+//     int **matriz = (int **) malloc (tamanho * sizeof(int *));
+//     if (matriz == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
 
-    for (int i = 0; i < tamanho; i++) {
-        matriz[i] = (int *) malloc (tamanho * sizeof(int));
-        if (matriz[i] == NULL) {
-            printf("ERRO! Memoria insuficiente!\n");
-            return 1;
-        }
-    }
+//     for (int i = 0; i < tamanho; i++) {
+//         matriz[i] = (int *) malloc (tamanho * sizeof(int));
+//         if (matriz[i] == NULL) {
+//             printf("ERRO! Memoria insuficiente!\n");
+//             return 1;
+//         }
+//     }
 
-    int **matrizResultante = (int **) malloc (tamanho * sizeof(int *));
-    if (matrizResultante == NULL) {
-        printf("ERRO! Memoria insuficiente!\n");
-        return 1;
-    }
+//     int **matrizResultante = (int **) malloc (tamanho * sizeof(int *));
+//     if (matrizResultante == NULL) {
+//         printf("ERRO! Memoria insuficiente!\n");
+//         return 1;
+//     }
 
-    for (int i = 0; i < tamanho; i++) {
-        matrizResultante[i] = (int *) malloc (tamanho * sizeof(int));
-        if (matrizResultante[i] == NULL) {
-            printf("ERRO! Memoria insuficiente!\n");
-            return 1;
-        }
-    }
+//     for (int i = 0; i < tamanho; i++) {
+//         matrizResultante[i] = (int *) malloc (tamanho * sizeof(int));
+//         if (matrizResultante[i] == NULL) {
+//             printf("ERRO! Memoria insuficiente!\n");
+//             return 1;
+//         }
+//     }
 
-    for (int i = 0; i < tamanho; i++) {
-        for (int j = 0; j < tamanho; j++) {
-            printf("Digite o valor da %d coluna da linha %d: ",j+1, i+1);
-            scanf("%d", &matriz[i][j]);
-        }
-    }
+//     for (int i = 0; i < tamanho; i++) {
+//         for (int j = 0; j < tamanho; j++) {
+//             printf("Digite o valor da %d coluna da linha %d: ",j+1, i+1);
+//             scanf("%d", &matriz[i][j]);
+//         }
+//     }
 
-    printf("Digite um valor para a escalar: ");
-    scanf("%d", &escalar);
+//     printf("Digite um valor para a escalar: ");
+//     scanf("%d", &escalar);
 
-    for (int i = 0; i < tamanho; i++) {
-        for (int j = 0; j < tamanho; j++) {
-            matrizResultante[i][j] = matriz[i][j] * escalar;
-        }
-    }
+//     for (int i = 0; i < tamanho; i++) {
+//         for (int j = 0; j < tamanho; j++) {
+//             matrizResultante[i][j] = matriz[i][j] * escalar;
+//         }
+//     }
 
-    for (int i = 0; i < tamanho; i++) {
-        for (int j = 0; j < tamanho; j++) {
-            printf("[%d]", matrizResultante[i][j]);
-        }
-        printf("\n");
-    }
+//     for (int i = 0; i < tamanho; i++) {
+//         for (int j = 0; j < tamanho; j++) {
+//             printf("[%d]", matrizResultante[i][j]);
+//         }
+//         printf("\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+// #include <stdio.h> //! QUESTÃO 1
+// #include <stdlib.h>
+
+// int main(void) {
+//     int size = 3, qtd = 0;
+//     float matriz[size][size], soma = 0, media = 0;
+
+//     for(int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             printf("Digite o valor da %d coluna da %d linha: ", j+1, i+1);
+//             scanf("%f", &matriz[i][j]);
+//             if (i + j == size - 1) {
+//                 soma += matriz[i][j];
+//                 qtd++;
+//             }
+//         }
+//         printf("\n");
+//     }
+//     media = soma / qtd;
+
+//     for(int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if(i + j == size - 1) {
+//                 printf("[%.2f]", matriz[i][j]);
+//             } else {
+//                 printf("[   ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+//     printf("A media dos valores da diagonal secundaria: %.2f", media);
+
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! QUESTÃO 2
+
+// float maior_peso(float *pesos);
+
+// int main(void) {
+//     float pesos[4], maiorPeso = 0;
+    
+//     for (int i = 0; i < 4; i++) {
+//         printf("Digite o %do peso:", i+1);
+//         scanf("%f", &pesos[i]);
+//     }
+
+//     maiorPeso = maior_peso(pesos);
+
+//     printf("O maior peso encontrado foi: %.2f", maiorPeso);
+
+//     return 0;
+// }
+
+// float maior_peso(float *pesos) {
+//     float maior = 0;
+//     for (int i = 0; i < 4; i++) {
+//         if(*(pesos + i) > maior) {
+//             maior = (*(pesos + i));
+//         }
+//     }
+//     return maior;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 3
+
+// void contar_palavras(char *frase, int *numPalavras);
+
+// int main(void) {
+//     char frase[200];
+//     int qtdPalavras = 0;
+//     printf("Digite uma frase: ");
+//     fgets(frase, sizeof(frase), stdin);
+
+//     contar_palavras(frase, &qtdPalavras);
+
+//     printf("Quantidade de palavras da frase: %d", qtdPalavras);
+//     return 0;
+// }
+
+// void contar_palavras(char *frase, int *numPalavras) {
+//     while (*frase != '\0') {
+//         if(*frase == ' ' || *frase == '\n') {
+//             (*numPalavras)++;
+//         }
+//         frase++;
+//     }
+// }
+
+
+
+//! EXERCÍCIO 4 
+
+// A memória alocada para um programa pode ser realizada de forma estática, dinâmica ou automática, reservando blocos de memória para armazenamento de dados. Com relação à alocação de memória, é correto afirmar:
+
+// a) As memórias alocadas através da instrução malloc são liberadas automaticamente após o seu uso.
+// b) A alocação dinâmica de memória é feita sob demanda do programa, através de instruções como malloc em C.
+// c) A alocação dinâmica de memória é realizada em tempo de compilação.
+// d) A alocação estática de memória permite uma reserva de memória sem tamanho pré-definido.
+// e) A instrução free libera um espaço em memória para que seja possível encerrar o programa.
+
+//* RESPOSTA: B)
+
+
+//! EXERCÍCIO 1 ( PRODUTO DE MATRIZES )
+
+// #include <stdio.h>
+
+// int main(void) {
+//     int matrizA[3][2];
+//     int matrizB[2][3];
+//     int matrizResultante[3][3] = {0}; // SEMPRE VAI SER //* matrizResultante[LINHA DA PRIMEIRA][LINHA DA SEGUNDA] // DECLARAR COMO = {0}, SENAO COMEÇA COM VALORES ALEATORIOS
+
+//     printf("Preencha os valores da matriz A:\n\n");
+//     for (int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             printf("Digite o valor da %da coluna da %da linha: ", j+1, i+1);
+//             scanf("%d", &matrizA[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Preencha os valores da matriz B:\n\n");
+//     for (int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("Digite o valor da %da coluna da %da linha: ", j+1, i+1);
+//             scanf("%d", &matrizB[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     for (int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             for(int k = 0; k < 2; k++) {
+//                 matrizResultante[i][j] += matrizA[i][k] * matrizB[k][j]; // o [k] sempre vai ser coluna da matrizA e linha da matrizB
+//             }
+//         }
+//     }
+
+//     printf("\nMatriz A:\n\n");
+//     for (int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             printf("[%d]", matrizA[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nMatriz B:\n\n");
+//     for (int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("[%d]", matrizB[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nMatriz Resultante:\n\n");
+//     for (int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("[%d]", matrizResultante[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
