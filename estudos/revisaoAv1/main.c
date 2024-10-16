@@ -469,7 +469,6 @@
 //     printf("Quantidade de palavras da frase: %d", qtdPalavras);
 //     return 0;
 // }
-
 // void contar_palavras(char *frase, int *numPalavras) {
 //     while (*frase != '\0') {
 //         if(*frase == ' ' || *frase == '\n') {
@@ -478,6 +477,7 @@
 //         frase++;
 //     }
 // }
+
 
 
 
@@ -551,5 +551,375 @@
 //             printf("[%d]", matrizResultante[i][j]);
 //         }
 //         printf("\n");
+//     }
+// }
+
+
+
+
+// #include <stdio.h> //! MATRIZ TRANSPOSTA
+
+// int main(void) {
+//     int linha = 2;
+//     int coluna = 3;
+//     int matriz[linha][coluna];
+//     int matrizTransposta[coluna][linha];
+
+
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             printf("Digite o valor da %da coluna da %da linha: ", j+1, i+1);
+//             scanf("%d", &matriz[i][j]);
+//             matrizTransposta[j][i] = matriz[i][j];
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Matriz original:\n");
+//     for (int i = 0; i < linha; i++) {
+//         for (int j = 0; j < coluna; j++) {
+//             printf("[%d]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Matriz original:\n");
+//     for (int i = 0; i < coluna; i++) {
+//         for (int j = 0; j < linha; j++) {
+//             printf("[%d]", matrizTransposta[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! ESCALAR SOMA
+
+// int main(void) {
+//     int escalar = 0, matriz[3][3];
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("Digite o valor da %da coluna da %da linha: ", j+1, i+1);
+//             scanf("%d", &matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Digite um escalar para somar os valores:");
+//     scanf("%d", &escalar);
+
+//     printf("Matriz original:\n");
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("[%d]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+    
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             matriz[i][j] += escalar;
+//         }
+//     }
+
+//     printf("Matriz com a escalar:\n");
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("[%d]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+    
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! DIAGONAIS
+
+// int main(void) {
+//     int size = 5;
+
+//     printf("\nDiagonal principal:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i == j) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nTriangulo superior da diagonal principal:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i < j) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nTriangulo inferior da diagonal principal:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i > j) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nDiagonal secundaria:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i + j == size - 1) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nTriangulo superior da diagonal secundaria:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i + j < size - 1) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nTriangulo inferior da diagonal secundaria:\n");
+//     for (int i = 0; i < size; i++) {
+//         for (int j = 0; j < size; j++) {
+//             if (i + j >= size) {
+//                 printf("[*]");
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+// #include <stdio.h> //! TESTE DE TABELA ASCII 
+
+// int main(void) {
+//     char letra;
+
+//     printf("Digite uma letra:"); 
+//     scanf(" %c", &letra);
+
+//     if (letra <= 90) {
+//         printf("\nEssa letra eh maiscula!\n");
+//         printf("Letra digitada: %c\nLetra minuscula: %c", letra, letra + 32);
+//     } else if (letra >= 97) {
+//         printf("\nEssa letra eh minuscula!\n");
+//         printf("Letra digitada: %c\nLetra maiscula: %c", letra, letra - 32);
+//     }
+//     return 0;
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 1 GPT 
+
+// int main(void) {
+//     int matriz[4][4], soma = 0;
+
+//     for (int i = 0; i < 4; i++) {
+//         for (int j = 0; j < 4; j++) {
+//             printf("Digite o valor da %da coluna da %da linha:", j+1, i+1);
+//             scanf("%d", &matriz[i][j]);
+//             if (i == j) {
+//                 soma += matriz[i][j];
+//             }
+//         }
+//     }
+
+//     for (int i = 0; i < 4; i++) {
+//         for (int j = 0; j < 4; j++) {
+//             if(i == j) {
+//                 printf("[%d]", matriz[i][j]);
+//             } else {
+//                 printf("[ ]");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("A soma dos valores da diagonal principal: %d\n", soma);
+
+//     return 0;
+// }
+
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 2 GPT
+
+// float mediaIdade(int *idades);
+
+// int main(void) {
+//     int idades[5];
+//     float media = 0;
+//     for (int i = 0; i < 5; i++) {
+//         printf("Digite a %da idade: ", i+1);
+//         scanf("%d", &idades[i]);
+//     }
+
+//     media = mediaIdade(idades);
+
+//     printf("A media das idades informadas eh: %.2f", media);
+//     return 0;
+// }
+
+// float mediaIdade(int *idades) {
+//     float soma = 0;
+//     for (int i = 0; i < 5; i++) {
+//         soma += *(idades + i);
+//     }
+//     return soma / 5;
+// }
+
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 3 GPT
+
+// void contar_maiusculas(char *frase, int *numMaiusculas);
+
+// int main(void) {
+//     char frase[100];
+//     int numMaiusculas = 0;
+
+//     printf("Digite uma frase:");
+//     fgets(frase, sizeof(frase), stdin);
+
+//     contar_maiusculas(frase, &numMaiusculas);
+
+//     printf("A quantidade de letras maiusculas digitadas foi: %d", numMaiusculas);
+//     return 0;
+// }
+
+
+// void contar_maiusculas(char *frase, int *numMaiusculas){
+//     while (*frase != '\0') {
+//         if (*frase >= 65 && *frase <= 90) {
+//             (*numMaiusculas)++;
+//         }
+//         frase++;
+//     }
+// }
+
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 4 GPT
+
+// int main(void) {
+//     float matriz[2][3], matrizTransposta[3][2];
+
+//     for(int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("Digite o valor da %d coluna e %d linha: ", j+1, i+1);
+//             scanf("%f", &matriz[i][j]);
+//             matrizTransposta[j][i] = matriz[i][j];
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nMatriz original:\n");
+//     for(int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 3; j++) {
+//             printf("[%.2f]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("\nMatriz transposta:\n");
+//     for(int i = 0; i < 3; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             printf("[%.2f]", matrizTransposta[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+
+// include <stdio.h> //! EXERCÍCIO 5 GPT
+
+// void calcularDesvio(float *temperaturas, float *desvio);
+
+// int main(void) {
+//     float temp[7], desvio[7];
+
+//     for (int i = 0; i < 7; i++) {
+//         printf("Digite a %da temperatura: ", i+1);
+//         scanf("%f", &temp[i]);
+//     }
+
+//     calcularDesvio(temp, desvio);
+
+//     printf("\n");
+//     for (int i = 0; i < 7; i++) {
+//         printf("Temperatura %.1f: Desvio: %.1f\n", temp[i], desvio[i]);
+//     }
+//     return 0;
+// }
+
+// void calcularDesvio(float *temperaturas, float *desvio) {
+//     float soma = 0, media = 0;
+//     for (int i = 0; i < 7; i++) {
+//         soma += *(temperaturas + i);
+//     }
+//     media = soma / 7;
+//     for (int i = 0; i < 7; i++) {
+//         *(desvio + i) = (*(temperaturas + i) - media);
+//     }
+// }
+
+// #include <stdio.h>
+
+// void contar_vogais(char *frase, int *qtdVogais);
+
+// int main(void) {
+//     char frase[200];
+//     int qtdVogais = 0;
+
+//     printf("Digite uma frase: ");
+//     fgets(frase, sizeof(frase), stdin);
+
+//     contar_vogais(frase, &qtdVogais);
+
+//     printf("Quantidade de vogais na frase: %d", qtdVogais);
+//     return 0;
+// }
+
+// void contar_vogais(char *frase, int *qtdVogais) {
+//     while (*frase != '\0') {
+//         if (*frase == 'a' || *frase == 'e' || *frase == 'i' || *frase == 'o' ||*frase == 'u' || *frase == 'A' || *frase == 'E' || *frase == 'I' || *frase == 'O' || *frase == 'U') {
+//             (*qtdVogais)++;
+//         }
+//         frase++;
 //     }
 // }

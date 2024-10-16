@@ -530,18 +530,18 @@ int tabuada(int number) {
 
 
 
-// #include <stdio.h> //! EXERCÍCIO 15
+#include <stdio.h> //! EXERCÍCIO 15
 
-// // a) 25 (ENDEREÇO DA VARIÁVEL A) (ENDEREÇO DA VARIÁVEL A) 25 50 (ENDEREÇO DA VARIÁVEL B)
-// // b) "a" = VARIÁVEL DE TIPO INTEIRO, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = CONTEÚDO QUE O PONTEIRO APONTA (a), "b" = VARIÁVEL QUE ARMAZENA O CONTEÚDO DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
+// a) 25 (ENDEREÇO DA VARIÁVEL A) (ENDEREÇO DA VARIÁVEL A) 25 50 (ENDEREÇO DA VARIÁVEL B)
+// b) "a" = VARIÁVEL DE TIPO INTEIRO, "pa" = O ENDEREÇO DA VARIÁVEL APONTADA (a), "&a" = ENDEREÇO DA VARIÁVEL "a", "*pa" = CONTEÚDO QUE O PONTEIRO APONTA (a), "b" = VARIÁVEL QUE ARMAZENA O CONTEÚDO DA VARIÁVEL APONTADA(a) MAIS O VALOR DE "a"
 
-// int main(void) {
-//     int a = 25;
-//     int *pa = &a;
-//     int b = *pa + a;
-//     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
-//     return 0;
-// }
+int main(void) {
+    int a = 25;
+    int *pa = &a;
+    int b = *pa + a;
+    printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
+    return 0;
+}
 
 
 
