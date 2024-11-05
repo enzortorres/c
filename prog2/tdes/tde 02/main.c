@@ -22,11 +22,11 @@ int main(void) {
         printf("1- Cadastrar nova venda(s)\n");
         printf("2- Ver informacoes de uma venda especifica\n");
         printf("3- Ver informacoes de todas as vendas\n");
-        printf("4- Encerrar program\n");
+        printf("4- Encerrar programa\n");
         printf("-> ");
         
         if (scanf("%d", &opcao) != 1) {
-            printf("\033[1;31mOpção invalida, tente novamente!\033[0;m\n\n"); 
+            printf("\033[1;31mOpcao invalida, tente novamente!\033[0;m\n\n"); 
             while(getchar() != '\n');
             continue;
         }
@@ -49,7 +49,7 @@ int main(void) {
                 break;
 
             default:
-                printf("\033[1;31mOpção invalida, tente novamente!\033[0;m\n");
+                printf("\033[1;31mOpcao invalida, tente novamente!\033[0;m\n");
         }
     } while (opcao != 4);
 
