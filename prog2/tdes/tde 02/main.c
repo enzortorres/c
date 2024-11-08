@@ -189,9 +189,9 @@ void cadastrar_vendas() {
             }
         } while (hora < 0 || hora >= 24 || minuto < 0 || minuto >= 60);
         getchar();
-
-        printf("\n\033[32mVenda cadastrada com sucesso!\033[m\n\n");
         fprintf(file, "%s|%d|%s|%.2f|%d|%02d:%02d\n", nome, idade, sexo, valorVenda, qtdItensVendas, hora, minuto);
+        fclose(file);
+        printf("\n\033[32mVenda cadastrada com sucesso!\033[m\n\n");
     }
     do{
         printf("\033[33mVendas finalizadas. Deseja continuar cadastrando(\033[30ms\033[33m/\033[30mn\033[33m)?\033[m");
@@ -213,12 +213,11 @@ void cadastrar_vendas() {
         } while(voltarAoMenu != 's' && voltarAoMenu != 'S' && voltarAoMenu != 'n' && voltarAoMenu != 'N');
 
         if(voltarAoMenu == 's' || voltarAoMenu == 'S'){
-            main();
+            return;
         } else{
             exit(0);
         }
     }
-    fclose(file);
     free(venda);
 }
 
@@ -247,7 +246,7 @@ void informacao_venda_especifica() {
             if (strstr(linha, nome)) {
                 encontrou = 1;
                 struct Venda venda;
-                sscanf(linha, "%[^|]|%d|%c|%f|%d|%d:%d",
+                sscanf(linha, "%[^\n|]|%d|%c|%f|%d|%d:%d",
                     venda.cliente.nome, &venda.cliente.idade, &venda.cliente.sexo,
                     &venda.valorVenda, &venda.qtd, &venda.hora, &venda.minuto);
         
@@ -282,8 +281,6 @@ void informacao_venda_especifica() {
         }while (opcao != 's' && opcao != 'n');
     } while (opcao == 's');
     return;
-
-    
 }
 
 void informacao_vendas() {
