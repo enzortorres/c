@@ -3,7 +3,7 @@
 #include <string.h> 
 #include <ctype.h>
 // Enzo Ribas|19|M|120|40|5|12:34
-// NOME| IDADE | SEXO | VALOR-VENDA | QTD | HORARIO DE COMPRA
+// NOME|IDADE|SEXO|VALOR-VENDA|QTD|HORARIO-DE-COMPRA
 
 struct Cliente {
     char nome[100];
@@ -190,7 +190,7 @@ void cadastrar_vendas() {
         } while (hora < 0 || hora >= 24 || minuto < 0 || minuto >= 60);
         getchar();
         fprintf(file, "%s|%d|%s|%.2f|%d|%02d:%02d\n", nome, idade, sexo, valorVenda, qtdItensVendas, hora, minuto);
-        fclose(file);
+        fclose(file); 
         printf("\n\033[32mVenda cadastrada com sucesso!\033[m\n\n");
     }
     do{
@@ -246,7 +246,7 @@ void informacao_venda_especifica() {
             if (strstr(linha, nome)) {
                 encontrou = 1;
                 struct Venda venda;
-                sscanf(linha, "%[^\n|]|%d|%c|%f|%d|%d:%d",
+                sscanf(linha, "%[^|]|%d|%c|%f|%d|%d:%d",
                     venda.cliente.nome, &venda.cliente.idade, &venda.cliente.sexo,
                     &venda.valorVenda, &venda.qtd, &venda.hora, &venda.minuto);
         
@@ -379,7 +379,7 @@ void informacao_vendas() {
                 printf("\033[4;32mValor da Venda:\033[0;37m R$ %.2f\n", valorVenda);
                 printf("\033[4;32mQuantidade de Itens:\033[0;37m %d\n", qtdItens);
                 printf("\033[4;32mHorario da Compra:\033[0;37m %02d:%02d\n", hora, minuto);
-                printf("\033[1;36---------------------------------\033[0m\n");
+                printf("\033[1;36m---------------------------------\033[0m\n");
             }
         }
     }
