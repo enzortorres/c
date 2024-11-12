@@ -37,30 +37,30 @@ int main(void) {
         printf("\033[30m3- \033[32mVer informacoes de todas as vendas\033[m\n");
         printf("\033[30m4- \033[32mEncerrar programa\033[m\n");
         printf("\033[1;36m-> \033[0m");
-        
+
         if (scanf("%d", &opcao) != 1) {
             printf("\n\033[1;31mOpcao invalida, tente novamente!\033[0;m\n\n"); 
             while(getchar() != '\n');
             continue;
         }
         getchar();
-        
+
         printf("\033[1;36m----------------------------------\033[0;m\n");
         switch(opcao) {
             case 1: 
                 cadastrar_vendas();
                 break;
-            
+
             case 2: 
                 informacao_venda_especifica();
                 break;
-            
+
             case 3: 
                 informacao_vendas();
                 break;
-            
+
             case 4: 
-                printf("Saindo do programa...\n");
+                printf("Encerrando o programa...\n");
                 break;
 
             default:
@@ -73,13 +73,7 @@ int main(void) {
 void cadastrar_vendas() {
     int qtdVendas = 0, nomeValido = 0;
     char continuarCadastrando, voltarAoMenu;
-    FILE *file = fopen("registro.txt", "a");
 
-    if (file == NULL) {
-        printf("\033[1;31mErro ao abrir o arquivo.\033[0m\n");
-        return;
-    }
-    
     do{
         printf("\033[33mQuantas vendas deseja cadastrar? \033[m");
         if(scanf("%d", &qtdVendas) != 1 || qtdVendas < 0){
@@ -99,19 +93,24 @@ void cadastrar_vendas() {
 
     // Enzo Ribas|19|M|120|40|5|12:34
     // NOME| IDADE | SEXO | VALOR-VENDA | QTD | HORARIO DE COMPRA
-    
+
     char nome[50], sexo[3];
     int idade = 0, qtdItensVendas = 0, hora, minuto, tamanhoNome, testeSexo, tamanhoSexo;
     float valorVenda = 0;
     printf("\n");
     for (int i = 0; i < qtdVendas; i++) {
+        FILE *file = fopen("registro.txt", "a");
+        if (file == NULL) {
+            printf("\033[1;31mErro ao abrir o arquivo.\033[0m\n");
+            return;
+        }
         do{
             nomeValido = 0;
             printf("\033[33mNome do cliente: \033[m");
             fgets(nome, sizeof(nome), stdin);
             nome[strcspn(nome, "\n")] = '\0'; //? Para tirar o "\n" do final da string
             tamanhoNome = strlen(nome); 
-            
+
             if (strlen(nome) < 4) {
                 nomeValido = 1;
             }
@@ -137,7 +136,7 @@ void cadastrar_vendas() {
             }
         } while (idade < 0);
 
-        
+
         //! Cadastro sexo do cliente
         do {
             testeSexo = 0;
@@ -155,7 +154,7 @@ void cadastrar_vendas() {
             }
         } while (testeSexo == 1);
 
-        
+
         //! Cadastro valor da venda
         do {        
             printf("\033[33mValor da venda: \033[m");
@@ -166,7 +165,7 @@ void cadastrar_vendas() {
             }
         } while(valorVenda < 0);
         getchar();
-        
+
         //! Cadastro quantidade de itens
         do{
             printf("\033[33mQuantidade de itens: \033[m");
@@ -194,7 +193,7 @@ void cadastrar_vendas() {
         printf("\n\033[32mVenda cadastrada com sucesso!\033[m\n\n");
     }
     do{
-        printf("\033[33mVendas finalizadas. Deseja continuar cadastrando(\033[30ms\033[33m/\033[30mn\033[33m)?\033[m");
+        printf("\033[33mVendas finalizadas. Deseja continuar cadastrando(\033[30ms\033[33m/\033[30mn\033[33m)? \033[m");
         scanf(" %c", &continuarCadastrando);
         if(continuarCadastrando != 's' && continuarCadastrando != 'S' && continuarCadastrando != 'n' && continuarCadastrando != 'N'){
             printf("\033[1;31mERRO! Digite um valor valido!\033[0m\n");
@@ -215,10 +214,10 @@ void cadastrar_vendas() {
         if(voltarAoMenu == 's' || voltarAoMenu == 'S'){
             return;
         } else{
+            free(venda);
             exit(0);
         }
     }
-    free(venda);
 }
 
 void informacao_venda_especifica() {
@@ -249,7 +248,7 @@ void informacao_venda_especifica() {
                 sscanf(linha, "%[^|]|%d|%c|%f|%d|%d:%d",
                     venda.cliente.nome, &venda.cliente.idade, &venda.cliente.sexo,
                     &venda.valorVenda, &venda.qtd, &venda.hora, &venda.minuto);
-        
+
                 printf("\033[1;36m---------------------------------\033[0m\n");
                 printf("\033[4;32mCliente:\033[0;37m %s\n", venda.cliente.nome);
                 printf("\033[4;32mIdade:\033[0;37m %d\n", venda.cliente.idade);
@@ -257,7 +256,7 @@ void informacao_venda_especifica() {
                 printf("\033[4;32mValor da Venda:\033[0;37m R$ %.2f\n", venda.valorVenda);
                 printf("\033[4;32mQuantidade de Itens:\033[0;37m %d\n", venda.qtd);
                 printf("\033[4;32mHorario da Compra:\033[0;37m %02d:%02d\033[m\n", venda.hora, venda.minuto);
-                
+
                 totalVendas += venda.valorVenda;
                 qtdItensClienteEspecifico += venda.qtd;
                 qtdVendasCliente++;
@@ -272,7 +271,7 @@ void informacao_venda_especifica() {
         }
 
         fclose(file);
-        
+
 
         do{
             printf("\n\033[33mDeseja pesquisar outra venda (\033[30ms\033[33m/\033[30mn\033[33m)?\033[m");
@@ -288,8 +287,8 @@ void informacao_vendas() {
     float valorTotalH = 0, valorTotal = 0, mediaValoresCompras = 0;
     int maiorIdade = 0, qtdAcimaValor = 0, qtdVendaExata = 0, qtdVendaAposMeioDia = 0;
     int qtdClienteF = 0, qtdTotaldeItens = 0, qtdItens = 0, idade = 0, hora = 0, minuto = 0;
-    char menorNome[50] = "", nomeMaisVelho[50] = "", resposta[3], nome[50], linha[200], sexo;
-    
+    char menorNome[50] = "", nomeMaisVelho[50] = "", resposta, nome[50], linha[200], sexo;
+
     FILE* file = fopen("registro.txt", "r");
     if (file == NULL) {
         printf("\033[1;31mErro ao abrir o arquivo.\033[0m\n");
@@ -366,7 +365,7 @@ void informacao_vendas() {
             }
         }
     }
-    
+
     rewind(file);
     printf("\n\033[1;36mCompras do cliente mais velho:\033[0m\n");
     while (fgets(linha, sizeof(linha), file)) {
@@ -384,14 +383,21 @@ void informacao_vendas() {
         }
     }
     do {
-        printf("\033[33mDeseja retornar ao menu principal?\033[30m sim \033[33mou\033[30m nao \033[33m?\033[30m ");
-        scanf("%s", resposta);
-        if (strcmp(resposta, "sim") == 0) {
+        printf("\n\033[33mDeseja retornar ao menu principal?\033[30m s \033[33mou\033[30m n\033[33m?\033[30m ");
+        scanf(" %c", &resposta);
+        getchar();
+        if (resposta == 's' || resposta == 'S') {
             fclose(file);
             return;
+        } else if (resposta == 'n' || resposta == 'N') {
+            printf("Encerrando o programa...\n");
+            fclose(file);
+            exit(0);
+        } else {
+            printf("\n\033[1;31mERRO! Digite um valor valido entre s ou n!\033[0m\n\n");
         }
-    } while (strcmp(resposta, "sim") != 0);
-    
+    } while (resposta != 's' || resposta != 'S');
+
     fclose(file);
     exit(0);
 }
