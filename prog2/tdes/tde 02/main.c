@@ -245,9 +245,7 @@ void informacao_venda_especifica() {
             if (strstr(linha, nome)) {
                 encontrou = 1;
                 struct Venda venda;
-                sscanf(linha, "%[^|]|%d|%c|%f|%d|%d:%d",
-                    venda.cliente.nome, &venda.cliente.idade, &venda.cliente.sexo,
-                    &venda.valorVenda, &venda.qtd, &venda.hora, &venda.minuto);
+                sscanf(linha, "%[^|]|%d|%c|%f|%d|%d:%d", venda.cliente.nome, &venda.cliente.idade, &venda.cliente.sexo, &venda.valorVenda, &venda.qtd, &venda.hora, &venda.minuto);
 
                 printf("\033[1;36m---------------------------------\033[0m\n");
                 printf("\033[4;32mCliente:\033[0;37m %s\n", venda.cliente.nome);
@@ -286,7 +284,7 @@ void informacao_vendas() {
     float valorVenda = 0, valorEspecifico = 0, maiorValorVenda = 0;
     float valorTotalH = 0, valorTotal = 0, mediaValoresCompras = 0;
     int maiorIdade = 0, qtdAcimaValor = 0, qtdVendaExata = 0, qtdVendaAposMeioDia = 0;
-    int qtdClienteF = 0, qtdTotaldeItens = 0, qtdItens = 0, idade = 0, hora = 0, minuto = 0;
+    int qtdClienteF = 0, qtdVendas = 0, qtdItens = 0, qtdTotalItens = 0, idade = 0, hora = 0, minuto = 0;
     char menorNome[50] = "", nomeMaisVelho[50] = "", resposta, nome[50], linha[200], sexo;
 
     FILE* file = fopen("registro.txt", "r");
@@ -300,7 +298,8 @@ void informacao_vendas() {
 
     while (fscanf(file, "%[^|]|%d|%c|%f|%d|%d:%d\n", nome, &idade, &sexo, &valorVenda, &qtdItens, &hora, &minuto) == 7) {
         valorTotal += valorVenda;
-        qtdTotaldeItens += qtdItens;
+        qtdVendas++;
+        qtdTotalItens += qtdItens;
 
         if (valorVenda > maiorValorVenda) {
             maiorValorVenda = valorVenda;
@@ -336,14 +335,14 @@ void informacao_vendas() {
         }
     }
 
-    mediaValoresCompras = valorTotal / qtdTotaldeItens;
+    mediaValoresCompras = valorTotal / qtdVendas;
 
     printf("\33[4;32m\nQuantidade de vendas acima do valor (\033[4;30mR$ %.2f\33[4;32m):\033[0;37m %d\n", valorEspecifico, qtdAcimaValor);
     printf("\33[4;32mQuantidade de venda com exatamente \033[4;30m2\033[4;32m itens:\033[0;37m %d\n", qtdVendaExata);
     printf("\33[4;32mQuantidade de vendas apos 12:00:\033[0;37m %d\n", qtdVendaAposMeioDia);
     printf("\33[4;32mQuantidade de clientes mulheres:\033[0;37m %d\n", qtdClienteF);
     printf("\33[4;32mValor total comprado por homens:\033[0;37m R$ %.2f\n", valorTotalH);
-    printf("\33[4;32mQuantidade total de itens vendidos:\033[0;37m %d\n", qtdTotaldeItens);
+    printf("\33[4;32mQuantidade total de itens vendidos:\033[0;37m %d\n", qtdTotalItens);
     printf("\33[4;32mValor total das vendas:\033[0;37m R$ %.2f\n", valorTotal);
     printf("\33[4;32mMedia dos valores das compras:\033[0;37m R$ %.2f\n", mediaValoresCompras);
     printf("\33[4;32mMaior compra realizada:\033[0;37m R$ %.2f\n", maiorValorVenda);
