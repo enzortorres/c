@@ -54,9 +54,9 @@ int main(void) {
 
             printf("Digite o sexo do convidado (m/f): ");
             scanf(" %c", &cliente[i].sexo);
-            cliente[i].sexo = tolower(cliente[i].sexo);
+            cliente[i].sexo = tolower(cliente[i].sexo); //TODO: tolower() transforma a string em minusculo
 
-            if (!isalpha(cliente[i].sexo) || (cliente[i].sexo != 'm' && cliente[i].sexo != 'f')) {
+            if (!isalpha(cliente[i].sexo) || (cliente[i].sexo != 'm' && cliente[i].sexo != 'f')) { //TODO: isalpha() checa se é uma letra
                 printf("\n\033[1;31mERRO! Valor invalido! Somente (m/f).\033[0m\n\n");
                 erro = 1;
                 while (getchar() != '\n');
@@ -86,10 +86,14 @@ void buscar() {
     fgets(nomeBusca, sizeof(nomeBusca), stdin);
     nomeBusca[strcspn(nomeBusca, "\n")] = '\0';
 
-    while(fgets(linha, sizeof(linha), file)) {
-        if (strstr(linha, nomeBusca)) {
+    while(fgets(linha, sizeof(linha), file)) { //TODO: Le todas as linhas até que chego no final (retorna NULL).
+        sscanf(linha, "%[^|]|%d|%c", nome, &idade, &sexo);
+
+        // if (strstr(linha, nomeBusca)) { //! Deste outro modo compara se a string digitada contém em qualquer lugar, caso procure por "Ana", o usuário "Ana Clara", irá entrar na condição.
+            // sscanf(linha, "%[^|]|%d|%c", nome, &idade, &sexo); //! Caso for utilizar strstr(), o sscanf() fica dentro do if.
+
+        if (strcmp(nome, nomeBusca) == 0) { //TODO: Compara se a nome desejado é igual ao nome da linha, caso não for retorna -1.
             encontrou = 1;
-            sscanf(linha, "%[^|]|%d|%c", nome, &idade, &sexo);
             printf("\033[1;36m---------------------------------\033[0m\n");
             printf("Nome: %s\n", nome);
             printf("Idade: %d\n", idade);
