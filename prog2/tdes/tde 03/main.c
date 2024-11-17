@@ -13,7 +13,7 @@
 
 // int main(void) {
 //     livro livro1;
-    
+
 //     printf("Digite o titulo do livro: ");
 //     fgets(livro1.titulo, sizeof(livro1.titulo), stdin);
 //     livro1.titulo[strcspn(livro1.titulo, "\n")] = '\0';
@@ -137,4 +137,56 @@
 
 
 
-#include <stdio.h>
+#include <stdio.h> //! EXERCÍCIO 4
+
+struct Tempo {
+    int hora;
+    int minuto;
+    int segundo;
+};
+
+typedef struct Tempo tempo;
+
+struct DataTempo {
+    int dia;
+    int mes;
+    int ano;
+    tempo horario;
+};
+
+typedef struct DataTempo datatempo;
+
+void showTime(datatempo momento);
+void showData(datatempo momento);
+
+int main(void) {
+    datatempo momento;
+
+    // Horario
+    printf("Digite o horario atual (hh:mm:ss): ");
+    scanf("%d:%d:%d", &momento.horario.hora, &momento.horario.minuto, &momento.horario.segundo);
+
+    // Data
+    printf("Digite a data atual (dd/mm/yyyy): ");
+    scanf("%d/%d/%d", &momento.dia, &momento.mes, &momento.ano);
+
+    showData(momento);
+    showTime(momento);
+
+    return 0;
+}
+
+void showTime(datatempo momento) {
+    printf("Horario atual: ");
+    printf("%d:%d:%d\n", momento.horario.hora, momento.horario.minuto, momento.horario.segundo);
+}
+
+void showData(datatempo momento) {
+    char meses[12][20] = {
+        "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
+        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    };
+
+    printf("Data atual: ");
+    printf("%d de %s de %d\n", momento.dia, meses[momento.mes - 1], momento.ano);
+}
