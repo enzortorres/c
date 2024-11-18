@@ -137,56 +137,138 @@
 
 
 
-#include <stdio.h> //! EXERCÍCIO 4
+// #include <stdio.h> //! EXERCÍCIO 4
 
-struct Tempo {
-    int hora;
-    int minuto;
-    int segundo;
-};
+// struct Tempo {
+//     int hora;
+//     int minuto;
+//     int segundo;
+// };
 
-typedef struct Tempo tempo;
+// typedef struct Tempo tempo;
 
-struct DataTempo {
-    int dia;
-    int mes;
-    int ano;
-    tempo horario;
-};
+// struct DataTempo {
+//     int dia;
+//     int mes;
+//     int ano;
+//     tempo horario;
+// };
 
-typedef struct DataTempo datatempo;
+// typedef struct DataTempo datatempo;
 
-void showTime(datatempo momento);
-void showData(datatempo momento);
+// void showTime(datatempo momento);
+// void showData(datatempo momento);
 
-int main(void) {
-    datatempo momento;
+// int main(void) {
+//     datatempo momento;
 
-    // Horario
-    printf("Digite o horario atual (hh:mm:ss): ");
-    scanf("%d:%d:%d", &momento.horario.hora, &momento.horario.minuto, &momento.horario.segundo);
+//     // Horario
+//     printf("Digite o horario atual (hh:mm:ss): ");
+//     scanf("%d:%d:%d", &momento.horario.hora, &momento.horario.minuto, &momento.horario.segundo);
 
-    // Data
-    printf("Digite a data atual (dd/mm/yyyy): ");
-    scanf("%d/%d/%d", &momento.dia, &momento.mes, &momento.ano);
+//     // Data
+//     printf("Digite a data atual (dd/mm/yyyy): ");
+//     scanf("%d/%d/%d", &momento.dia, &momento.mes, &momento.ano);
 
-    showData(momento);
-    showTime(momento);
+//     showData(momento);
+//     showTime(momento);
 
-    return 0;
-}
+//     return 0;
+// }
 
-void showTime(datatempo momento) {
-    printf("Horario atual: ");
-    printf("%d:%d:%d\n", momento.horario.hora, momento.horario.minuto, momento.horario.segundo);
-}
+// void showTime(datatempo momento) {
+//     printf("Horario atual: ");
+//     printf("%d:%d:%d\n", momento.horario.hora, momento.horario.minuto, momento.horario.segundo);
+// }
 
-void showData(datatempo momento) {
-    char meses[12][20] = {
-        "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
-        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
-    };
+// void showData(datatempo momento) {
+//     char meses[12][20] = {
+//         "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
+//         "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+//     };
 
-    printf("Data atual: ");
-    printf("%d de %s de %d\n", momento.dia, meses[momento.mes - 1], momento.ano);
-}
+//     printf("Data atual: ");
+//     printf("%d de %s de %d\n", momento.dia, meses[momento.mes - 1], momento.ano);
+// }
+
+
+
+// #include <stdio.h> //! EXERCÍCIO 5
+// #include <string.h>
+
+// struct ContaBancaria {
+//     int numConta;
+//     char nomeTitular[30];
+//     float saldo;
+// }; 
+
+// typedef struct ContaBancaria banco;
+
+// void sacar(float valor, banco *conta);
+// void depositar(float valor, banco *conta);
+
+// int main(void) {
+//     int opcao;
+//     float valor;
+//     banco conta;
+
+//     printf("Digite o numero da conta: ");
+//     scanf("%d", &conta.numConta);
+//     getchar();
+//     strcpy(conta.nomeTitular, "Enzo Ribas");
+//     conta.saldo = 1000;
+
+    
+
+//     do {
+//         printf("\nOque deseja realizar?\n");
+//         printf("1- Sacar\n");
+//         printf("2- Depositar\n");
+//         printf("3- Checar saldo\n");
+//         printf("4- Sair\n");
+//         printf("\033[30m->\033[m ");
+//         scanf("%d", &opcao);
+//         if(opcao == 1) {
+//             printf("Quanto deseja sacar? ");
+//             scanf("%f", &valor);
+//             sacar(valor, &conta);
+//         } else if (opcao == 2) {
+//             printf("Quanto deseja depositar? ");
+//             scanf("%f", &valor);
+//             depositar(valor, &conta);
+//         } else if (opcao == 3) {
+//             printf("\033[33mSaldo: R$ %.2f\n\033[m", conta.saldo);
+//         } else if (opcao == 4) {
+//             printf("Encerrando programa...\n");
+//             break;
+//         } else {
+//             printf("\033[31mDigite um valor valido!\033[m\n");
+//         }
+//     } while (opcao != 4);
+
+//     return 0;
+// }
+
+// void sacar(float valor, banco *conta) {
+//     if (valor > conta->saldo) {
+//         printf("\033[31mSaldo insuficiente.\033[m\n");
+//     } else if (valor == 0) {
+//         printf("\033[31mValor invalido.\033[m\n");
+//     } else {
+//         conta->saldo -= valor;
+//         printf("\033[32mSaque realizado com sucesso. \033[33mSaldo atual: R$ %.2f\033[m\n", conta->saldo);
+//     }
+// }
+
+// void depositar(float valor, banco *conta) {
+//     if (valor <= 0) {
+//         printf("\033[31mValor invalido.\033[m\n");
+//     } else {
+//         conta->saldo += valor;
+//         printf("\033[32mDeposito realizado com sucesso. \033[33mSaldo atual: R$ %.2f\033[m\n", conta->saldo);
+//     }
+// }
+
+
+
+//! EXERCÍCIO 6
