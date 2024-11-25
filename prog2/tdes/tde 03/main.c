@@ -271,4 +271,6 @@
 
 
 
-//! EXERCÍCIO 6
+#include <stdio.h> //! EXERCÍCIO 6
+#include <string.h>
+
