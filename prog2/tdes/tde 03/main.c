@@ -318,81 +318,114 @@
 
 
 
-#include <stdio.h> //! EXERCÍCIO 7
-#include <stdlib.h>
+// #include <stdio.h> //! EXERCÍCIO 7
+// #include <stdlib.h>
+// #include <string.h>
+// struct funcionario {
+//     char nome[50];
+//     int anosEmpresa;
+//     float salarios[12];
+//     float bonusFinal;
+// };
+
+// typedef struct funcionario funcionario;
+
+// void calcularBonus(funcionario *funcs, int quantidade);
+
+// void exibirFuncionarios(funcionario *funcs, int quantidade);
+
+// int main(void) {
+//     int qtd = 0;
+
+//     printf("Digite a quantidade de funcionarios: ");
+//     scanf("%d", &qtd);
+//     getchar();
+
+//     funcionario *funcs = (funcionario *) malloc (qtd * sizeof(funcionario));
+//     if (funcs == NULL) {
+//         printf("Erro de memoria.\n");
+//         return 1;
+//     }
+
+//     for (int i = 0; i < qtd; i++) {
+//         printf("\nDigite os dados do funcionario %d:\n", i + 1);
+
+//         printf("Nome: ");
+//         fgets(funcs[i].nome, sizeof(funcs[i].nome), stdin);
+//         funcs[i].nome[strcspn(funcs[i].nome, "\n")] = '\0';
+
+//         printf("Tempo de empresa (em anos): ");
+//         scanf("%d", &funcs[i].anosEmpresa);
+
+//         printf("Digite os 12 salarios do ano (separados por espaco)\n");
+//         for (int j = 0; j < 12; j++) {
+//             printf("Salario %d: ", j+1);
+//             scanf("%f", &funcs[i].salarios[j]);
+//         }
+//     }
+
+//     calcularBonus(funcs, qtd);
+
+//     printf("\nInformacoes dos funcionarios:\n");
+//     exibirFuncionarios(funcs, qtd);
+
+//     free(funcs);
+
+//     return 0;
+// }
+
+// void calcularBonus(funcionario *funcs, int qtd) {
+//     for (int i = 0; i < qtd; i++) {
+//         float salarioAnual = 0;
+//         for (int j = 0; j < 12; j++) {
+//             salarioAnual += funcs[i].salarios[j];
+//         }
+
+//         funcs[i].bonusFinal = salarioAnual / 12;
+//         if (funcs[i].anosEmpresa >= 10 && salarioAnual < 50000) {
+//             funcs[i].bonusFinal *= 1.20;
+//         }
+//     }
+// }
+
+// void exibirFuncionarios(funcionario *funcs, int qtd) {
+//     for (int i = 0; i < qtd; i++) {
+//         printf("Nome: %s\n", funcs[i].nome);
+//         printf("Tempo de empresa: %d anos\n", funcs[i].anosEmpresa);
+//         printf("Bonus final: R$ %.2f\n", funcs[i].bonusFinal);
+//         printf("----------------------------------\n");
+//     }
+// }
+
+
+
+#include <stdio.h>
 #include <string.h>
-struct funcionario {
-    char nome[50];
-    int anosEmpresa;
-    float salarios[12];
-    float bonusFinal;
-};
-
-typedef struct funcionario funcionario;
-
-void calcularBonus(funcionario *funcs, int quantidade);
-
-void exibirFuncionarios(funcionario *funcs, int quantidade);
 
 int main(void) {
+    char linha[200];
+    FILE *file
     int qtd = 0;
+    char target[] = "a";
 
-    printf("Digite a quantidade de funcionarios: ");
-    scanf("%d", &qtd);
-    getchar();
-
-    funcionario *funcs = (funcionario *) malloc (qtd * sizeof(funcionario));
-    if (funcs == NULL) {
-        printf("Erro ao alocar memoria.\n");
+    file = fopen("bd.txt", "r");
+    if (file == NULL) {
+        printf("Erro ao abrir arquivo!\n");
         return 1;
     }
 
-    for (int i = 0; i < qtd; i++) {
-        printf("\nDigite os dados do funcionario %d:\n", i + 1);
+    while (fgets(linha, sizeof(linha), file) != NULL) {
+        char *ptr = linha;
 
-        printf("Nome: ");
-        fgets(funcs[i].nome, sizeof(funcs[i].nome), stdin);
-        funcs[i].nome[strcspn(funcs[i].nome, "\n")] = '\0';
-
-        printf("Tempo de empresa (em anos): ");
-        scanf("%d", &funcs[i].anosEmpresa);
-
-        printf("Digite os 12 salarios do ano (separados por espaco): ");
-        for (int j = 0; j < 12; j++) {
-            printf("Salario %d: ", j+1);
-            scanf("%f", &funcs[i].salarios[j]);
+        while ((ptr = strstr(ptr, target)) != NULL) {
+            qtd++;
+            ptr += strlen(target);
         }
     }
 
-    calcularBonus(funcs, qtd);
+    fclose(file);
 
-    printf("\nInformacoes dos funcionarios:\n");
-    exibirFuncionarios(funcs, qtd);
-
-    free(funcs);
+    printf("A string '%s' foi encontrada %d vezes!\n", target, qtd);
 
     return 0;
-}
-
-void calcularBonus(funcionario *funcs, int qtd) {
-    for (int i = 0; i < qtd; i++) {
-        float salarioAnual = 0;
-        for (int j = 0; j < 12; j++) {
-            salarioAnual += funcs[i].salarios[j];
-        }
-
-        funcs[i].bonusFinal = salarioAnual / 12;
-        if (funcs[i].anosEmpresa >= 10 && salarioAnual < 50000) {
-            funcs[i].bonusFinal *= 1.20;
-        }
-    }
-}
-
-void exibirFuncionarios(funcionario *funcs, int qtd) {
-    for (int i = 0; i < qtd; i++) {
-        printf("Nome: %s\n", funcs[i].nome);
-        printf("Tempo de empresa: %d anos\n", funcs[i].anosEmpresa);
-        printf("Bonus final: R$ %.2f\n", funcs[i].bonusFinal);
-        printf("----------------------------------\n");
-    }
 }
