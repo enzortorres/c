@@ -424,7 +424,6 @@ int main(void) {
     }
 
     fclose(file);
-
     printf("A string '%s' foi encontrada %d vezes!\n", target, qtd);
 
     return 0;
