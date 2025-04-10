@@ -8,7 +8,6 @@
 //     for (int i = 0; i < 5; i++) {
 //         printf("%d ", valores[i]);
 //     }
-    
 // }
 
 // int duplicar(int *array) {
@@ -74,18 +73,20 @@ void contarCaracteres(char *str, int *numCaracteres);
 
 int main(void) {
     char string[50];
+    int qtd=0;
     printf("Digite o seu nome:");
     fgets(string, sizeof(string), stdin);
-    int tam = strlen(string);
-    for (int i = 0; i < strlen(string); i++) {
-        if (string[i] == ' ' || string[i] == '\n') {
-            tam--;
-        }
-    }
-    printf("%d\n", tam);
+
+    contarCaracteres(string, &qtd);
+
+    printf("%d\n", qtd);
     return 0;
 }
 
 void contarCaracteres(char *str, int *numCaracteres) {
-    
+    for (int i = 0; i < strlen(string); i++) {
+        if (*string[i] != ' ' || *string[i] != '\n') {
+            *numCaracteres++
+        }
+    }
 }
